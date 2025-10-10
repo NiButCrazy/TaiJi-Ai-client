@@ -1,6 +1,12 @@
 ## 更新日志
 
-## [v0.0.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.2...v0.0.3) -  v0.0.2..
+## [v0.0.4](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.3...v0.0.4) -  v0.0.3..
+
+#### :bug: 修复
+
+-  修复了工作流pnpm安装问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(b5db587)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/b5db5878dedce1515b07ad5365871e8bd40b0f5b)
+
+## [v0.0.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.2...v0.0.3) -  2025/10/10 
 
 #### :bug: 修复
 
