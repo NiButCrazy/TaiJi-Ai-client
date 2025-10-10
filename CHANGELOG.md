@@ -1,8 +1,16 @@
 ## 更新日志
 
-## 0.0.1
+## [v0.0.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.1...v0.0.2) -  v0.0.1..
 
 #### :package: 杂项
+
+-  工作流修改 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(4b68991)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/4b689915aada6fda1a13336fbcf06bd50a85c212)
+
+## v0.0.1
+
+#### :package: 杂项
+
+-  工作流修改 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(5808c5e)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/5808c5e524e7d726410c0c064ea4e24bd16cd2ba)
 
 -  工作流和自述文件修改 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(0876635)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/0876635d88a050fd759b6eacdd5463cf2508d844)
 
