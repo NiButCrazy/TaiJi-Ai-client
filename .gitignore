@@ -1,0 +1,15 @@
+node_modules
+dist
+.DS_Store
+.eslintcache
+*.log*
+.idea/workspace.xml
+.out/dist/
+.out/main/
+.out/preload/
+.out/renderer/
+.idea/vcs.xml
+
+# 项目排除路径
+/.out/
+/src/preload/preload.d.ts

@@ -1,0 +1,34 @@
+.n-scrollbar-container .n-scrollbar-content .n-alert-body.n-alert-body--bordered {
+  display: none
+}
+
+.n-scrollbar-container .n-scrollbar-content .n-alert__border {
+  display: none
+}
+
+
+body {
+  user-select: none;
+}
+
+body::selection {
+  background-color: rgba(237, 228, 254, 1);
+}
+
+body.theme-dark::selection {
+  background-color: rgba(53, 42, 94, 1);
+}
+
+
+#chat-content {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+.n-layout--static-positioned.selectable {
+  -webkit-user-select: none;
+}
+
+span.clickable.flex.items-center:hover {
+  color: #b1a4fd;
+}

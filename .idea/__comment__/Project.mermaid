@@ -1,0 +1,66 @@
+flowchart LR
+    subgraph src 源代码目录
+        subgraph components[components 组件库]
+            subgraph button / Button 组件
+                subgraph assets2[assets 资源]
+                    ...1[...]
+                end
+                subgraph lib2[lib 代码]
+                    Button.tsx
+                end
+                subgraph styles2[styles 样式]
+                    ...3[...]
+                end
+                assets2 --> lib2
+                styles2 --样式表-->lib2[Button.tsx] --导出至--> index1.ts[index.ts<br>...]
+            end
+            subgraph app / App 组件
+                subgraph assets3[assets 资源]
+                    ...4[...]
+                end
+                subgraph lib3[lib 代码]
+                    App.tsx
+                end
+                subgraph styles3[styles 样式]
+                    ...6[...]
+                end
+                assets3 --> lib3
+                styles3 --样式表-->lib3[Button.tsx] --导出至--> index3.ts[index.ts<br>...]
+            end
+            subgraph pages 业务界面组件库
+                subgraph Home 组件
+                    subgraph assets1[assets 资源]
+                        subgraph images
+                            react.svg
+                        end
+                    end
+                    subgraph lib1[lib 代码]
+                        Home.tsx[Home.tsx]
+                    end
+                    subgraph styles1[styles 样式]
+                        Home.module.less
+                    end
+                    index2.ts[index.ts<br>整合导出内容]
+                    assets1--图标-->lib1
+                    styles1 --样式表-->lib1 --导出至--> index2.ts
+                end
+            end
+        end
+        subgraph utils 工具模块
+            router.tsx[router.tsx 路由管理模块]
+        end
+        components --组件挂载--> router.tsx
+        main.tsx[main.tsx 逻辑入口]
+        router.tsx --路由挂载--> main.tsx
+        subgraph global[global 全局访问入口]
+            index.css[index.css 全局样式]
+        end
+        global --全局属性挂载--> main.tsx
+    end
+    subgraph public[public 公共资源根]
+        subgraph images
+            vitelogo[vite.svg]
+        end
+    end
+    index.html[index.html 页面入口]
+    public --静态资源--> index.html

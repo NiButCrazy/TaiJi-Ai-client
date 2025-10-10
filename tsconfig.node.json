@@ -1,0 +1,30 @@
+{
+  "extends": "@electron-toolkit/tsconfig/tsconfig.node.json",
+  "include": ["electron.vite.config.*", "src/main/**/*", "src/preload/**/*"],
+  "exclude": ["static"],
+  "compilerOptions": {
+    "composite": true,
+    "types": ["electron-vite/node"],
+
+    "paths": {
+      "@static/*": [
+        "./static/*"
+      ]
+    },
+    "moduleResolution": "bundler",
+    "noEmit": true,
+
+    "module": "ESNext",
+    "skipLibCheck": true,
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    "allowSyntheticDefaultImports": true,
+    "useDefineForClassFields": true,
+    "allowImportingTsExtensions": true
+  }
+}

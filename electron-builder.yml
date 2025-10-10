@@ -1,0 +1,50 @@
+appId: com.electron.app  # 设置应用的唯一标识符，用于区分不同的 Electron 应用
+productName: test  # 定义应用的名称
+directories:
+  output: .out/dist         # 自定义输出目录（替代默认的 `dist`）
+  buildResources: .out/build   # 自定义构建资源目录（替代默认的 `build`）, 指定所需的资源目录，例如图标、启动画面等
+files:  # 指定需要包含在最终打包中的文件和文件夹，通常包括源代码、资源文件等
+  - '!**/.vscode/*'
+  - '!src/*'
+  - '!electron.vite.config.{js,ts,mjs,cjs}'
+  - '!{.eslintcache,eslint.config.mjs,.prettierignore,.prettierrc.yaml,dev-app-update.yml,CHANGELOG.md,README.md}'
+  - '!{.env,.env.*,.npmrc,pnpm-lock.yaml}'
+  - '!{tsconfig.json,tsconfig.node.json,tsconfig.app.json}'
+  - '!{.out/dist,.out/build}'
+  - '!static/snap'
+  - '!desktop.ini'
+win:  # 配置 Windows 平台的打包选项
+  executableName: test  # 设置生成的可执行文件名称
+nsis:
+  artifactName: ${name}-${version}-setup.${ext}  # 设置安装包名称
+  shortcutName: ${productName}  # 设置快捷方式的名称
+  uninstallDisplayName: ${productName}  # 设置卸载软件的名称
+  createDesktopShortcut: always  # 是否创建桌面快捷方式
+  language: 2052  # 安装包语言
+  oneClick: false  # 必须禁用一键安装
+  allowToChangeInstallationDirectory: true  # 允许用户修改
+mac:
+  entitlementsInherit: .out/build/entitlements.mac.plist
+  extendInfo:
+    - NSCameraUsageDescription: Application requests access to the device's camera.
+    - NSMicrophoneUsageDescription: Application requests access to the device's microphone.
+    - NSDocumentsFolderUsageDescription: Application requests access to the user's Documents folder.
+    - NSDownloadsFolderUsageDescription: Application requests access to the user's Downloads folder.
+  notarize: false
+dmg:
+  artifactName: ${name}-${version}.${ext}
+linux:
+  target:
+    - AppImage
+    - snap
+    - deb
+  maintainer: electronjs.org
+  category: Utility
+appImage:  # 配置 AppImage 的打包选项
+  artifactName: ${name}-${version}.${ext}
+npmRebuild: false  # 是否对 Electron 构建的 Node.js 模块进行重新编译
+publish:  # 配置自动更新服务器地址，支持 GitHub、S3、FTP 等多种发布方式
+  provider: generic  # 更新服务提供者类型，如 github
+  url: https://example.com/auto-updates
+electronDownload:
+  mirror: https://npmmirror.com/mirrors/electron/  # 设置镜像下载地址

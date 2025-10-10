@@ -1,0 +1,48 @@
+index.tree.tsv	📝 树状视图注释
+__comment__	注释文件根
+src	源代码目录
+static	静态资源目录
+dist	打包输出目录
+build	打包资源目录
+.gitignore	🔕 Git 忽略文件配置
+public	公共资源根
+index.html	项目入口视图
+package.json	项目包管理
+README.md	🔖 自述文件
+vite.config.ts	Vite 插件配置
+assets	组件资源目录
+components	组件库
+hooks	自定义钩子
+pages	业务界面
+utils	工具模块
+main.tsx	项目逻辑入口
+vite-env.d.ts	类型声明
+router.tsx	路由管理模块
+config.ts	配置管理模块
+tsconfig.json	TS 配置文件入口
+tsconfig.node.json	Node 配置
+Buttons	按钮类组件
+.idea	IDE 配置目录
+.out	构建输出目录
+audios	音频
+soundEffects	音效
+fonts	字体
+images	图片
+styles	样式表
+snap	截图
+videos	视频
+electron.vite.config.ts	Web 应用配置
+electron-builder.yml	应用打包配置
+tsconfig.app.json	类型检查配置
+main	主进程
+preload	预加载
+renderer	渲染器
+lib	组件代码库
+home	首页
+version	版本组件
+app	应用入口
+button	按钮组件
+styles.global.less	全局样式
+index.ts	模块入口
+global	全局访问入口
+routers	路由管理

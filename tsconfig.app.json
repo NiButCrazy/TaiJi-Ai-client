@@ -1,0 +1,47 @@
+{
+  "extends": "@electron-toolkit/tsconfig/tsconfig.web.json",
+  "include": [
+    "src/renderer/src/vite-env.d.ts",
+    "src/renderer/src/**/*",
+    "src/renderer/src/**/*.tsx",
+    "src/preload/*.d.ts"
+  ],
+  "exclude": ["**/assets/*", "src/renderer/public"],
+  "compilerOptions": {
+    "composite": true,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    /* 路径别名 */
+    "paths": {
+      "@renderer/*": [
+        "./src/renderer/src/*"
+      ],
+      "@components/*": [
+        "./src/renderer/src/components/*"
+      ],
+      "@utils/*": [
+        "./src/renderer/src/utils/*"
+      ],
+      "@global/*": [
+        "./src/renderer/src/global/*"
+      ],
+      "@hooks/*": [
+        "./src/renderer/src/hooks/*"
+      ]
+    },
+    "module": "ESNext",
+    "skipLibCheck": true,
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "noEmit": true,
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noFallthroughCasesInSwitch": true,
+    "noUncheckedSideEffectImports": true,
+    "allowSyntheticDefaultImports": true,
+    "useDefineForClassFields": true,
+    "allowImportingTsExtensions": true
+  }
+}

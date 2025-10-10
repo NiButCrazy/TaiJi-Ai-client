@@ -1,0 +1,54 @@
+{
+  "name": "taiji-ai",
+  "version": "0.0.0",
+  "description": "a electron app",
+  "main": ".out/main/index.js",
+  "author": "Ni But Crazy",
+  "type": "module",
+  "license": "MIT",
+  "scripts": {
+    "start": "chcp 65001 && electron-vite preview ",
+    "dev": "chcp 65001 && electron-vite dev",
+    "build": "npm run typecheck && electron-vite build",
+    "typecheck:node": "tsc --noEmit -p tsconfig.node.json --composite false",
+    "typecheck:app": "tsc --noEmit -p tsconfig.app.json --composite false",
+    "typecheck": "npm run typecheck:node && npm run typecheck:app",
+    "postinstall": "electron-builder install-app-deps",
+    "build:unpack": "npm run build && electron-builder --dir",
+    "build:win": "npm run build && electron-builder --win",
+    "build:mac": "electron-vite build && electron-builder --mac",
+    "build:linux": "electron-vite build && electron-builder --linux",
+    "version": "nbc-auto-changelog -p && git add CHANGELOG.md"
+  },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "electron"
+    ]
+  },
+  "dependencies": {
+    "@electron-toolkit/preload": "^3.0.1",
+    "@electron-toolkit/utils": "^4.0.0",
+    "electron-store": "^11.0.2"
+  },
+  "devDependencies": {
+    "@electron-toolkit/tsconfig": "^1.0.1",
+    "@types/node": "^22.14.1",
+    "@types/react": "^19.1.2",
+    "@types/react-dom": "^19.1.2",
+    "@vitejs/plugin-react": "^4.3.4",
+    "electron": "^35.1.5",
+    "electron-builder": "^25.1.8",
+    "electron-builder-squirrel-windows": "25.1.8",
+    "electron-devtools-installer": "^4.0.0",
+    "electron-vite": "^3.1.0",
+    "less": "^4.3.0",
+    "nbc-auto-changelog": "^1.0.4",
+    "react": "^19.1.0",
+    "react-dom": "^19.1.0",
+    "react-router": "^7.5.1",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.4",
+    "zustand": "^5.0.3"
+  }
+}
