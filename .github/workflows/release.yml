@@ -11,6 +11,9 @@ jobs:
     runs-on: windows-latest
 
     steps:
+      - name: Install pnpm
+        run: npm install -g pnpm
+
       - name: Checkout code
         uses: actions/checkout@v4
         with:
@@ -22,8 +25,6 @@ jobs:
           node-version: '20'
           cache: 'pnpm'
 
-      - name: Install pnpm
-        run: npm install -g pnpm
 
       - name: Install dependencies
         run: pnpm install
