@@ -12,4 +12,3 @@ dist
 
 # 项目排除路径
 /.out/
-/src/preload/preload.d.ts
