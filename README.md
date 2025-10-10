@@ -1,24 +1,10 @@
-# Vite + Electron + React + TypeScript 创建模板
-个人自用
+# 太极 Ai - 客户端
 
-## 安装使用
-```shell
-npm create nbc-app < projectName | 可选 >
-# yarn create nbc-app < projectName | 可选 >
-# pnpm create nbc-app < projectName | 可选 >
-```
-> 当然也可以直接克隆项目
-### 注意事项
-根目录的 `static` 目录下的静态资源被引用时最好加入 `?asset` 作为后缀，路径正常填写
+## 简介
 
-而 `public` 目录下的静态资源被引用时无需添加后缀，但路径需要以 `/` 开头
+一个基于electron的非官方客户端，该项目改善原客户端依托答辩的使用体验，并添加了更多功能。
 
-> 开发扩展方面，支持 React DevTools 等扩展，感兴趣的也可以查看个人 [汉化版 React DevTools](https://github.com/NiButCrazy/react-devtools-extension-chinese)
-
-### 第三方库
-- React Router - 路由管理
-- Zustand - 状态管理
-- Less - 样式预处理
+![软件截图](./static/snap/1.png)
 
 ## 项目配置
 
@@ -45,6 +31,7 @@ $ pnpm dev --rendererOnly
 # 热重载调试
 $ pnpm dev --w
 ```
+
 > [!TIP]
 > `断点调试`详见[这篇文章](https://cn.electron-vite.org/guide/debugging#webstorm)
 
