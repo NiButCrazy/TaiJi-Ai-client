@@ -1,6 +1,12 @@
 ## 更新日志
 
-## [v0.0.6](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.5...v0.0.6) -  v0.0.5..
+## [v0.0.7](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.6...v0.0.7) -  v0.0.6..
+
+#### :wrench: 依赖 | 构建
+
+-  修复了工作流终端 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(0030852)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/00308521318cef62d3aafbdb39f3d6ccc2102da4)
+
+## [v0.0.6](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.5...v0.0.6) -  2025/10/11 
 
 #### :wrench: 依赖 | 构建
 
