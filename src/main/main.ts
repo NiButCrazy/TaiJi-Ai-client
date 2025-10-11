@@ -1,9 +1,9 @@
 import { store, local_config } from '../main/config.ts'
 import { app, shell, BrowserWindow, ipcMain, nativeTheme, Menu, dialog, Tray } from 'electron'
 import logger from 'electron-log'
-import { updateElectronApp } from 'update-electron-app'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import { devtools_custom_font, load_extensions } from './devtools'
+import electronUpdater, { type AppUpdater } from 'electron-updater'
 import { join } from 'path'
 import icon from '@static/icon.ico?asset'
 
@@ -19,10 +19,20 @@ if (!gotTheLock) {
 // 开发环境隔离用户数据
 if (is.dev) {
   app.setPath('userData', app.getPath('userData') + '-dev')
-  console.log('[太极Ai] 开发环境：', app.getPath('userData'))
+  console.log('[太极Ai] 开发环境用户数据：', app.getPath('userData'))
+} else {
+
 }
 
-updateElectronApp({ logger })
+export function getAutoUpdater(): AppUpdater {
+  // 兼容ESM写法
+  const { autoUpdater } = electronUpdater
+  if (!is.dev) autoUpdater.logger = logger
+  return autoUpdater
+}
+
+const autoUpdater = getAutoUpdater()
+autoUpdater.checkForUpdatesAndNotify()
 
 let mainWindow: BrowserWindow
 
