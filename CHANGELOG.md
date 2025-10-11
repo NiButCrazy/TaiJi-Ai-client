@@ -1,6 +1,12 @@
 ## 更新日志
 
-## [v0.1.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.1.1...v0.1.2) -  v0.1.1..
+## [v0.1.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.1.2...v0.1.3) -  v0.1.2..
+
+#### :bug: 修复
+
+-  修复了仓库地址问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(aacc5f3)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/aacc5f3ae816ef75a2a0721f309a8170231550a8)
+
+## [v0.1.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.1.1...v0.1.2) -  2025/10/11 
 
 #### :bug: 修复
 
