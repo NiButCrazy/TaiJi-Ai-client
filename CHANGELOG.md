@@ -1,6 +1,12 @@
 ## 更新日志
 
-## [v0.3.1](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.3.0...v0.3.1) -  v0.3.0..
+## [v0.3.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.3.1...v0.3.2) -  v0.3.1..
+
+#### :wrench: 依赖 | 构建
+
+-  更新日志的细节修改 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(9583dc8)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/9583dc88c439452ff20db0a0f658f667098dba0f)
+
+## [v0.3.1](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.3.0...v0.3.1) -  2025/10/11 
 
 #### :bug: 修复
 
