@@ -218,18 +218,14 @@ function createTray(mainWindow: BrowserWindow) {
   // 图标路径（推荐 PNG 或 ICO，尺寸一般 16x16、32x32）
 
   const tray = new Tray(icon)
-
   // 鼠标悬停提示
   tray.setToolTip('太极AI')
-
   // 托盘菜单
   const contextMenu = Menu.buildFromTemplate([
     { label: '显示主窗口', click: () => mainWindow.show() },
     { label: '退出', click: () => app.quit() }
   ])
-
   tray.setContextMenu(contextMenu)
-
   // 点击托盘图标事件
   tray.on('click', () => {
     // 这里可以控制窗口显示/隐藏
