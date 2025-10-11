@@ -36,9 +36,9 @@ export function getAutoUpdater(): AppUpdater {
 
 // 自动更新
 const autoUpdater = getAutoUpdater()
-autoUpdater.checkForUpdatesAndNotify()
+autoUpdater.checkForUpdates()
 
-autoUpdater.on('update-available', (UpdateInfo) => {
+autoUpdater.on('update-downloaded', (UpdateInfo) => {
   const notification = new Notification({
     title: `新版本 ${ UpdateInfo.version } 已准备就绪`,
     body: `将在您关闭软件后静默更新`
