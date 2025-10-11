@@ -1,6 +1,12 @@
 ## 更新日志
 
-## [v0.3.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.3.1...v0.3.2) -  v0.3.1..
+## [v0.4.0](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.3.2...v0.4.0) -  v0.3.2..
+
+#### :sparkles: 新功能
+
+-  添加了日志系统 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(e5094e4)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/e5094e4bca2017c090e1015c18975336387d3746)
+
+## [v0.3.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.3.1...v0.3.2) -  2025/10/11 
 
 #### :wrench: 依赖 | 构建
 
