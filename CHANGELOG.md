@@ -1,6 +1,12 @@
 ## 更新日志
 
-## [v0.1.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.1.2...v0.1.3) -  v0.1.2..
+## [v0.1.4](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.1.3...v0.1.4) -  v0.1.3..
+
+#### :bug: 修复
+
+-  字符串问题反复修 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(76c1a69)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/76c1a690851f502ee80c8c1158144a6c97dd9e7f)
+
+## [v0.1.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.1.2...v0.1.3) -  2025/10/11 
 
 #### :bug: 修复
 
