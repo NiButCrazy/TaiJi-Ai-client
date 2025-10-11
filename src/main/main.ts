@@ -115,7 +115,7 @@ function createWindow(): void {
 // 某些 API 只能在此事件发生后使用
 app.whenReady().then(() => {
   // 为 Windows 设置应用用户模型 ID
-  electronApp.setAppUserModelId('com.taiji-ai')
+  electronApp.setAppUserModelId('com.nbc.taiji-ai')
 
   ipcMain.handle('AppEnv', () => {return { local_config }})
 

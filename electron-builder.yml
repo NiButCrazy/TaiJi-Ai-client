@@ -1,4 +1,4 @@
-appId: com.taijiai.app  # 设置应用的唯一标识符，用于区分不同的 Electron 应用
+appId: com.nbc.taiji-ai  # 设置应用的唯一标识符，用于区分不同的 Electron 应用
 productName: 太极Ai  # 定义应用的名称
 directories:
   output: .out/dist         # 自定义输出目录（替代默认的 `dist`）
