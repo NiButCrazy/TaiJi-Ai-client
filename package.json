@@ -6,6 +6,10 @@
   "author": "Ni But Crazy",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/NiButCrazy/TaiJi-Ai-client.git"
+  },
   "scripts": {
     "start": "chcp 65001 && electron-vite preview ",
     "dev": "chcp 65001 && electron-vite dev",

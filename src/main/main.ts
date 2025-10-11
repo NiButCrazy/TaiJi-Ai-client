@@ -1,5 +1,6 @@
 import { store, local_config } from '../main/config.ts'
 import { app, shell, BrowserWindow, ipcMain, nativeTheme, Menu, dialog, Tray } from 'electron'
+import { updateElectronApp } from 'update-electron-app'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import { devtools_custom_font, load_extensions } from './devtools'
 import { join } from 'path'
@@ -51,6 +52,7 @@ function createWindow(): void {
   var first_start = true
   mainWindow.on('ready-to-show', () => {
     mainWindow.show()
+    updateElectronApp()
 
     // 这里是第一次启动刷新重载是为了正确加载react开发工具扩展，否则需要手动刷新
     if (is.dev) {
