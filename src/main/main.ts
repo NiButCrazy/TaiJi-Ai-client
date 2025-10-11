@@ -6,9 +6,24 @@ import { join } from 'path'
 import icon from '@static/icon.ico?asset'
 
 
+const gotTheLock = app.requestSingleInstanceLock()
+
+if (!gotTheLock) {
+  // 如果没获取到锁，说明已经有实例运行，直接退出
+  app.quit()
+}
+
+// 开发环境隔离用户数据
+if (is.dev) {
+  app.setPath('userData', app.getPath('userData') + '-dev')
+  console.log('[太极Ai] 开发环境：', app.getPath('userData'))
+}
+
+let mainWindow: BrowserWindow
+
 function createWindow(): void {
   // 创建浏览器窗口
-  const mainWindow = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     width: 1400,
     height: 850,
     show: false,
@@ -78,6 +93,16 @@ app.whenReady().then(() => {
   // 参考 https://github.com/alex8088/electron-toolkit/tree/master/packages/utils
   app.on('browser-window-created', (_, window) => {
     optimizer.watchWindowShortcuts(window)
+  })
+
+  // 如果获取到锁，监听第二个实例的触发事件
+  app.on('second-instance', () => {
+    // 有人尝试运行第二个实例 -> 激活第一个实例窗口
+    if (mainWindow) {
+      if (mainWindow.isMinimized()) mainWindow.restore()
+      mainWindow.focus()
+      mainWindow.show()
+    }
   })
 
   // 窗口控制

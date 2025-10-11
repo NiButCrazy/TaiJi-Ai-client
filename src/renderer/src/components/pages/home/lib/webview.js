@@ -4,24 +4,24 @@ function initChatFeatures(container, btn_container, input) {
     if (event.target.matches(
       'button.n-button.n-button--primary-type.n-button--small-type.n-button--secondary'
     )) {
-      container.scrollTop = container.scrollHeight
+      container.scrollTop = container.scrollHeight + 200
     }
   })
   // 获取输入框的提示文本, 判断发送按键
   const enter_text = document.querySelector('.chat-input-box .input-tools .text-xs.text-gray').innerText
 
   // 用事件委托监听键盘事件（输入框）
-  input.addEventListener('keydown', function (event) {
+  input.addEventListener('keyup', function (event) {
     if (event.key === 'Enter') {
       if (!enter_text) return
 
       if (event.shiftKey) {
         if (enter_text === 'Shift+Enter发送 / Enter换行') {
-          container.scrollTop = container.scrollHeight
+          container.scrollTop = container.scrollHeight + 200
         }
       } else {
         if (enter_text === 'Enter发送 / Shift+Enter换行') {
-          container.scrollTop = container.scrollHeight
+          container.scrollTop = container.scrollHeight + 200
         }
       }
     }

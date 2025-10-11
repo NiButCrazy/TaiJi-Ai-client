@@ -32,3 +32,12 @@ body.theme-dark::selection {
 span.clickable.flex.items-center:hover {
   color: #b1a4fd;
 }
+
+body.theme-light .hljs::selection, body.theme-light .hljs ::selection {
+  background-color: rgba(237, 228, 254, 1) !important;
+  color: inherit !important;
+}
+
+body.theme-dark .hljs::selection, body.theme-dark .hljs ::selection {
+  background-color: rgba(77, 64, 127, 0.8) !important;
+}
