@@ -1,11 +1,11 @@
 import { store, local_config } from '../main/config.ts'
-import { app, shell, BrowserWindow, ipcMain, nativeTheme, Menu, dialog, Tray } from 'electron'
-import logger from 'electron-log'
+import { app, shell, BrowserWindow, ipcMain, nativeTheme, Menu, dialog, Tray, Notification } from 'electron'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import { devtools_custom_font, load_extensions } from './devtools'
 import electronUpdater, { type AppUpdater } from 'electron-updater'
 import { join } from 'path'
 import icon from '@static/icon.ico?asset'
+import logger from 'electron-log'
 
 
 const gotTheLock = app.requestSingleInstanceLock()
@@ -27,12 +27,31 @@ if (is.dev) {
 export function getAutoUpdater(): AppUpdater {
   // 兼容ESM写法
   const { autoUpdater } = electronUpdater
-  if (!is.dev) autoUpdater.logger = logger
+  if (!is.dev) {
+    logger.transports.file.level = 'info'
+    autoUpdater.logger = logger
+  }
   return autoUpdater
 }
 
+// 自动更新
 const autoUpdater = getAutoUpdater()
 autoUpdater.checkForUpdatesAndNotify()
+
+autoUpdater.on('update-available', (UpdateInfo) => {
+  const notification = new Notification({
+    title: `新版本 ${ UpdateInfo.version } 已准备就绪`,
+    body: `将在您关闭软件后静默更新`
+  })
+  notification.on('click', () => {
+    if (mainWindow) {
+      if (mainWindow.isMinimized()) mainWindow.restore()
+      mainWindow.focus()
+      mainWindow.show()
+    }
+  })
+  notification.show()
+})
 
 let mainWindow: BrowserWindow
 
@@ -96,7 +115,7 @@ function createWindow(): void {
 // 某些 API 只能在此事件发生后使用
 app.whenReady().then(() => {
   // 为 Windows 设置应用用户模型 ID
-  electronApp.setAppUserModelId('com.TaiJiAi')
+  electronApp.setAppUserModelId('com.taiji-ai')
 
   ipcMain.handle('AppEnv', () => {return { local_config }})
 
