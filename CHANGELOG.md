@@ -1,6 +1,12 @@
 ## 更新日志
 
-## [v0.0.12](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.11...v0.0.12) -  v0.0.11..
+## [v0.0.13](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.12...v0.0.13) -  v0.0.12..
+
+#### :bug: 修复
+
+-  修复了安装包名称 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(0b538f0)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/0b538f04a7192a3cc015a782223c8066c6e74155)
+
+## [v0.0.12](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.11...v0.0.12) -  2025/10/11 
 
 #### :bug: 修复
 
