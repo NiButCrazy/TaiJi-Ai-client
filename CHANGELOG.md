@@ -1,6 +1,12 @@
 ## 更新日志
 
-## [v0.4.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.4.1...v0.4.2) -  v0.4.1..
+## [v0.4.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.4.2...v0.4.3) -  v0.4.2..
+
+#### :bug: 修复
+
+-  修复了更新通知重复的问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(f6efb05)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/f6efb05bfe8d8918cd4566fe67fadbff73a55edc)
+
+## [v0.4.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.4.1...v0.4.2) -  2025/10/11 
 
 #### :sparkles: 新功能
 
