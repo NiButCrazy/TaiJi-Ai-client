@@ -1,6 +1,12 @@
 ## 更新日志
 
-## [v0.1.6](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.1.5...v0.1.6) -  v0.1.5..
+## [v0.2.0](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.1.6...v0.2.0) -  v0.1.6..
+
+#### :sparkles: 新功能
+
+-  实例隔离,用户数据与开发环境隔离 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(76df7b6)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/76df7b662f321eeaeb744effa549360dc349dfaf)
+
+## [v0.1.6](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.1.5...v0.1.6) -  2025/10/11 
 
 #### :sparkles: 新功能
 
