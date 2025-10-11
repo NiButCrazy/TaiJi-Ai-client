@@ -41,9 +41,7 @@ jobs:
         id: changelog
         shell: pwsh
         run: |
-          Add-Content -Path $env:GITHUB_OUTPUT -Value "changelog_content<<EOF"
-          nbc-auto-changelog --stdout --starting-version "${{ github.ref_name }}" | Add-Content -Path $env:GITHUB_OUTPUT
-          Add-Content -Path $env:GITHUB_OUTPUT -Value "EOF"
+          nbc-auto-changelog --stdout --starting-version "${{ github.ref_name }}" | Out-File -FilePath changelog_new.md -Encoding utf8
 
       - name: Create Release
         id: create_release
@@ -53,7 +51,7 @@ jobs:
         with:
           tag_name: ${{ github.ref_name }}
           release_name: Release ${{ github.ref_name }}
-          body_path: CHANGELOG.md
+          body_path: changelog_new.md
           draft: false
           prerelease: false
 
