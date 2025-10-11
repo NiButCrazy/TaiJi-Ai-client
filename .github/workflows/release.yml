@@ -36,12 +36,8 @@ jobs:
 
       - name: Get CHANGELOG.md content
         id: changelog
-        run: |
-          $content = Get-Content -Path "CHANGELOG.md" -Raw
-          $content = $content -replace "[r](file://E:\MyCode\taiji-ai\node_modules\react-router)n", "\n"
-          $content = $content -replace "`n", "\n"
-          echo "changelog_content<<EOF" >> $env:GITHUB_OUTPUT
-          echo "$content" >> $env:GITHUB_OUTPUT
+        run: echo "changelog_content<<EOF" >> $env:GITHUB_OUTPUT
+          nbc-auto-changelog --stdout --starting-version ${{ github.ref_name }} >> $env:GITHUB_OUTPUT
           echo "EOF" >> $env:GITHUB_OUTPUT
 
       - name: Create Release
