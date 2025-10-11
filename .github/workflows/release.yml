@@ -36,9 +36,11 @@ jobs:
 
       - name: Get CHANGELOG.md content
         id: changelog
-        run: echo "changelog_content<<EOF" >> $env:GITHUB_OUTPUT
-          nbc-auto-changelog --stdout --starting-version ${{ github.ref_name }} >> $env:GITHUB_OUTPUT
-          echo "EOF" >> $env:GITHUB_OUTPUT
+        shell: pwsh
+        run: |
+          Add-Content -Path $env:GITHUB_OUTPUT -Value "changelog_content<<EOF"
+          nbc-auto-changelog --stdout --starting-version "${{ github.ref_name }}" | Add-Content -Path $env:GITHUB_OUTPUT
+          Add-Content -Path $env:GITHUB_OUTPUT -Value "EOF"
 
       - name: Create Release
         id: create_release
