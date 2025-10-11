@@ -1,5 +1,5 @@
-appId: com.electron.app  # 设置应用的唯一标识符，用于区分不同的 Electron 应用
-productName: test  # 定义应用的名称
+appId: com.taijiai.app  # 设置应用的唯一标识符，用于区分不同的 Electron 应用
+productName: 太极Ai  # 定义应用的名称
 directories:
   output: .out/dist         # 自定义输出目录（替代默认的 `dist`）
   buildResources: .out/build   # 自定义构建资源目录（替代默认的 `build`）, 指定所需的资源目录，例如图标、启动画面等
@@ -14,7 +14,7 @@ files:  # 指定需要包含在最终打包中的文件和文件夹，通常包�
   - '!static/snap'
   - '!desktop.ini'
 win:  # 配置 Windows 平台的打包选项
-  executableName: test  # 设置生成的可执行文件名称
+  executableName: 太极Ai  # 设置生成的可执行文件名称
 nsis:
   artifactName: ${name}-${version}-setup.${ext}  # 设置安装包名称
   shortcutName: ${productName}  # 设置快捷方式的名称

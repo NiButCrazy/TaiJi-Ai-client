@@ -52,19 +52,24 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.ref_name }}
-          release_name: Release ${{ github.ref_name }}
+          release_name: 太极AI ${{ github.ref_name }}
           body_path: changelog_new.md
           draft: false
           prerelease: false
 
-      - name: Upload release assets
+      # 上传 Windows 构建产物
+      - name: Upload release assets (Windows only)
+        shell: pwsh
         run: |
-          $files = Get-ChildItem -Path ".out/dist" -Recurse -Include "*.exe","*.msi","*.AppImage","*.deb","*.snap","*.dmg","*.zip"
+          $uploadUrl = "${{ steps.create_release.outputs.upload_url }}".Replace("{?name,label}", "")
+          $files = Get-ChildItem -Path ".out/dist" -Recurse -Include "*.exe","*.msi","*.zip"
           foreach ($file in $files) {
-            echo "Uploading $file"
-            curl.exe -X POST `
-              -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" `
-              -H "Content-Type: application/octet-stream" `
-              --data-binary "@$($file.FullName)" `
-              "${{ steps.create_release.outputs.upload_url }}?name=$($file.Name)"
+            Write-Host "Uploading $file"
+            Invoke-RestMethod -Method Post `
+              -Uri "$uploadUrl?name=$($file.Name)" `
+              -Headers @{
+                "Authorization" = "Bearer ${{ secrets.GITHUB_TOKEN }}"
+                "Content-Type"   = "application/octet-stream"
+              } `
+              -InFile $file.FullName
           }

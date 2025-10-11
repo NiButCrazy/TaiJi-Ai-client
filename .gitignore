@@ -9,6 +9,3 @@ dist
 .out/preload/
 .out/renderer/
 .idea/vcs.xml
-
-# 项目排除路径
-/.out/
