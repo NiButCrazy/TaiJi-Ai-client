@@ -1,6 +1,12 @@
 ## 更新日志
 
-## [v0.0.9](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.8...v0.0.9) -  v0.0.8..
+## [v0.0.10](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.9...v0.0.10) -  v0.0.9..
+
+#### :bug: 修复
+
+-  修复了工作流日志安装路径问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(380ee19)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/380ee19b1a1f2a39136adb29552cbd44570cf0b7)
+
+## [v0.0.9](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.8...v0.0.9) -  2025/10/11 
 
 #### :bug: 修复
 
