@@ -43,7 +43,7 @@ jobs:
         id: changelog
         shell: pwsh
         run: |
-          nbc-auto-changelog --stdout --starting-version "${{ github.ref_name }}" | Out-File -FilePath changelog_new.md -Encoding utf8
+          nbc-auto-changelog --stdout --ending-version "${{ github.ref_name }}" --starting-version "${{ github.ref_name }}" | Out-File -FilePath changelog_new.md -Encoding utf8
 
       - name: Create Release
         id: create_release
