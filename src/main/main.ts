@@ -183,7 +183,7 @@ app.whenReady().then(() => {
         },
         {
           label: '开源仓库地址',
-          click: () => {shell.openExternal('https://github.com/NiButCrazy/TaiJiAi')}
+          click: () => {shell.openExternal('https://github.com/NiButCrazy/TaiJi-Ai-client')}
         },
         { type: 'separator' },
         {

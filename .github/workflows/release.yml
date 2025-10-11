@@ -70,11 +70,5 @@ jobs:
             $fileNameEscaped = [System.Uri]::EscapeDataString($file.Name)
             $finalUrl = "$uploadUrl?name=$fileNameEscaped"
             Write-Host "Uploading $file"
-            Invoke-RestMethod -Method Post `
-              -Uri $finalUrl `
-              -Headers @{
-                "Authorization" = "Bearer $env:GITHUB_TOKEN"
-                "Content-Type"   = "application/octet-stream"
-              } `
-              -InFile $file.FullName
+            Invoke-RestMethod -Method Post -Uri $finalUrl -Headers @{ "Authorization" = "Bearer $env:GITHUB_TOKEN"; "Content-Type" = "application/octet-stream" } -InFile $file.FullName
           }
