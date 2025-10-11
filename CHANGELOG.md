@@ -1,6 +1,12 @@
 ## 更新日志
 
-## [v0.0.10](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.9...v0.0.10) -  v0.0.9..
+## [v0.0.11](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.10...v0.0.11) -  v0.0.10..
+
+#### :bug: 修复
+
+-  添加了权限 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(1875847)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/1875847d51d2bfb8413a39fc64f4bbfca9cc7623)
+
+## [v0.0.10](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.9...v0.0.10) -  2025/10/11 
 
 #### :bug: 修复
 
