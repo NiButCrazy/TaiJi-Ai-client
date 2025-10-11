@@ -62,7 +62,7 @@ jobs:
         shell: pwsh
         run: |
           $uploadUrl = "${{ steps.create_release.outputs.upload_url }}".Replace("{?name,label}", "")
-          $files = Get-ChildItem -Path ".out/dist" -Include "*.exe" -File
+          $files = Get-ChildItem -Path ".out/dist/*.exe" -File
           foreach ($file in $files) {
             Write-Host "Uploading $file"
             Invoke-RestMethod -Method Post `
