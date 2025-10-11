@@ -57,20 +57,23 @@ jobs:
           draft: false
           prerelease: false
 
+
       # 上传 Windows 构建产物
       - name: Upload release assets (Windows only)
         shell: pwsh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           $uploadUrl = "${{ steps.create_release.outputs.upload_url }}".Replace("{?name,label}", "")
-          $files = Get-ChildItem -Path ".out/dist/*.exe" -File
+          $files = Get-ChildItem ".out/dist/*.exe" -File
           foreach ($file in $files) {
-            $fileNameEscaped = [System.Uri]::EscapeDataString($file.Name)  # 文件名进行合法转义
+            $fileNameEscaped = [System.Uri]::EscapeDataString($file.Name)
             $finalUrl = "$uploadUrl?name=$fileNameEscaped"
             Write-Host "Uploading $file"
             Invoke-RestMethod -Method Post `
-              -Uri $finalUrl
+              -Uri $finalUrl `
               -Headers @{
-                "Authorization" = "Bearer ${{ secrets.GITHUB_TOKEN }}"
+                "Authorization" = "Bearer $env:GITHUB_TOKEN"
                 "Content-Type"   = "application/octet-stream"
               } `
               -InFile $file.FullName
