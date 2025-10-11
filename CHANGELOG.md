@@ -1,6 +1,12 @@
 ## 更新日志
 
-## [v0.0.7](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.6...v0.0.7) -  v0.0.6..
+## [v0.0.8](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.7...v0.0.8) -  v0.0.7..
+
+#### :bug: 修复
+
+-  修复了工作流日志识别 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(758895b)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/758895b95902d52525f5c51097a06e36c47ca3d5)
+
+## [v0.0.7](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.6...v0.0.7) -  2025/10/11 
 
 #### :wrench: 依赖 | 构建
 
