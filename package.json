@@ -1,6 +1,6 @@
 {
   "name": "taiji-ai",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "太极Ai的非官方客户端",
   "main": ".out/main/index.js",
   "author": "Ni But Crazy",
