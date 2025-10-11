@@ -43,7 +43,9 @@ jobs:
         id: changelog
         shell: pwsh
         run: |
-          nbc-auto-changelog --stdout --starting-version "${{ github.ref_name }}" | Out-File -FilePath changelog_new.md -Encoding utf8
+          Add-Content -Path $env:GITHUB_OUTPUT -Value "changelog_content<<EOF"
+          nbc-auto-changelog --stdout --starting-version "${{ github.ref_name }}" | Add-Content -Path $env:GITHUB_OUTPUT
+          Add-Content -Path $env:GITHUB_OUTPUT -Value "EOF"
 
       - name: Create Release
         id: create_release
@@ -62,7 +64,7 @@ jobs:
         shell: pwsh
         run: |
           $uploadUrl = "${{ steps.create_release.outputs.upload_url }}".Replace("{?name,label}", "")
-          $files = Get-ChildItem -Path ".out/dist" -Recurse -Include "*.exe","*.msi","*.zip"
+          $files = Get-ChildItem -Path ".out/dist" -Include "*.exe" -File
           foreach ($file in $files) {
             Write-Host "Uploading $file"
             Invoke-RestMethod -Method Post `
