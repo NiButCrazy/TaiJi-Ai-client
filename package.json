@@ -1,6 +1,6 @@
 {
   "name": "taiji-ai",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "a electron app",
   "main": ".out/main/index.js",
   "author": "Ni But Crazy",
