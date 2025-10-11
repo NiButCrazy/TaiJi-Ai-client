@@ -1,6 +1,12 @@
 ## 更新日志
 
-## [v0.0.11](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.10...v0.0.11) -  v0.0.10..
+## [v0.0.12](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.11...v0.0.12) -  v0.0.11..
+
+#### :bug: 修复
+
+-  不小心排除了图标 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(38e48d3)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/38e48d321d8ad754ac1c6ba71a76076a7e3e5e44)
+
+## [v0.0.11](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.10...v0.0.11) -  2025/10/11 
 
 #### :bug: 修复
 
