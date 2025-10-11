@@ -5,6 +5,8 @@ on:
     tags:
       - 'v*'
 
+permissions:
+  contents: write  # 必须有写权限才能创建 release
 
 jobs:
   release:
