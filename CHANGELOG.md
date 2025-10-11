@@ -1,6 +1,12 @@
 ## 更新日志
 
-## [v0.0.14](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.13...v0.0.14) -  v0.0.13..
+## [v0.1.0](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.14...v0.1.0) -  v0.0.14..
+
+#### :bug: 修复
+
+-  修复了发布包路径错误的问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(9e766d8)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/9e766d80954bf6d4aa784df2f263f2acdff88e7f)
+
+## [v0.0.14](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.13...v0.0.14) -  2025/10/11 
 
 #### :bug: 修复
 
