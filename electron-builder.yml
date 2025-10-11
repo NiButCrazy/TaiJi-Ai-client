@@ -14,9 +14,9 @@ files: # 指定需要包含在最终打包中的文件和文件夹，通常包�
   - '!static/snap'
   - '!desktop.ini'
 win: # 配置 Windows 平台的打包选项
-  executableName: 太极Ai  # 设置生成的可执行文件名称
+  executableName: taiji-ai  # 设置生成的可执行文件名称
 nsis:
-  artifactName: ${name}-v${version}-setup.${ext}  # 设置安装包名称
+  artifactName: ${name}-${version}-setup.${ext}  # 设置安装包名称
   shortcutName: ${productName}  # 设置快捷方式的名称
   uninstallDisplayName: ${productName}  # 设置卸载软件的名称
   createDesktopShortcut: always  # 是否创建桌面快捷方式

@@ -57,6 +57,6 @@ jobs:
           draft: false
           prerelease: false
           files: |
-            ./.out/dist/taiji-ai-${{ github.ref_name }}-setup.exe
+            ./.out/dist/*.exe
 
 
