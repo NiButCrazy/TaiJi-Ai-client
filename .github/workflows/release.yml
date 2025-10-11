@@ -64,9 +64,11 @@ jobs:
           $uploadUrl = "${{ steps.create_release.outputs.upload_url }}".Replace("{?name,label}", "")
           $files = Get-ChildItem -Path ".out/dist/*.exe" -File
           foreach ($file in $files) {
+            $fileNameEscaped = [System.Uri]::EscapeDataString($file.Name)  # 文件名进行合法转义
+            $finalUrl = "$uploadUrl?name=$fileNameEscaped"
             Write-Host "Uploading $file"
             Invoke-RestMethod -Method Post `
-              -Uri "$uploadUrl?name=$($file.Name)" `
+              -Uri $finalUrl
               -Headers @{
                 "Authorization" = "Bearer ${{ secrets.GITHUB_TOKEN }}"
                 "Content-Type"   = "application/octet-stream"
