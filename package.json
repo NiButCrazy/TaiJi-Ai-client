@@ -1,7 +1,7 @@
 {
   "name": "taiji-ai",
   "version": "0.1.4",
-  "description": "a electron app",
+  "description": "太极Ai的非官方客户端",
   "main": ".out/main/index.js",
   "author": "Ni But Crazy",
   "type": "module",

@@ -47,28 +47,16 @@ jobs:
 
       - name: Create Release
         id: create_release
-        uses: actions/create-release@v1
+        uses: softprops/action-gh-release@v2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.ref_name }}
-          release_name: 太极AI ${{ github.ref_name }}
+          name: 太极AI ${{ github.ref_name }}
           body_path: changelog_new.md
           draft: false
           prerelease: false
+          files: |
+            ./.out/dist/taiji-ai-${{ github.ref_name }}-setup.exe
 
 
-      # 上传 Windows 构建产物
-      - name: Upload release assets (Windows only)
-        shell: pwsh
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: |
-          $uploadUrl = "${{ steps.create_release.outputs.upload_url }}".Replace("{?name,label}", "")
-          $files = Get-ChildItem ".out/dist/*.exe" -File
-          foreach ($file in $files) {
-            $fileNameEscaped = [System.Uri]::EscapeDataString($file.Name)
-            $finalUrl = "$uploadUrl?name=$fileNameEscaped"
-            Write-Host "Uploading $file"
-            Invoke-RestMethod -Method Post -Uri "$finalUrl" -Headers @{ "Authorization" = "Bearer $env:GITHUB_TOKEN"; "Content-Type" = "application/octet-stream" } -InFile $file.FullName
-          }

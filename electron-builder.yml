@@ -3,7 +3,7 @@ productName: 太极Ai  # 定义应用的名称
 directories:
   output: .out/dist         # 自定义输出目录（替代默认的 `dist`）
   buildResources: .out/build   # 自定义构建资源目录（替代默认的 `build`）, 指定所需的资源目录，例如图标、启动画面等
-files:  # 指定需要包含在最终打包中的文件和文件夹，通常包括源代码、资源文件等
+files: # 指定需要包含在最终打包中的文件和文件夹，通常包括源代码、资源文件等
   - '!**/.vscode/*'
   - '!src/*'
   - '!electron.vite.config.{js,ts,mjs,cjs}'
@@ -13,10 +13,10 @@ files:  # 指定需要包含在最终打包中的文件和文件夹，通常包�
   - '!{.out/dist,.out/build}'
   - '!static/snap'
   - '!desktop.ini'
-win:  # 配置 Windows 平台的打包选项
+win: # 配置 Windows 平台的打包选项
   executableName: 太极Ai  # 设置生成的可执行文件名称
 nsis:
-  artifactName: ${name}-${version}-setup.${ext}  # 设置安装包名称
+  artifactName: ${name}-v${version}-setup.${ext}  # 设置安装包名称
   shortcutName: ${productName}  # 设置快捷方式的名称
   uninstallDisplayName: ${productName}  # 设置卸载软件的名称
   createDesktopShortcut: always  # 是否创建桌面快捷方式
@@ -40,10 +40,10 @@ linux:
     - deb
   maintainer: electronjs.org
   category: Utility
-appImage:  # 配置 AppImage 的打包选项
+appImage: # 配置 AppImage 的打包选项
   artifactName: ${name}-${version}.${ext}
 npmRebuild: false  # 是否对 Electron 构建的 Node.js 模块进行重新编译
-publish:  # 配置自动更新服务器地址，支持 GitHub、S3、FTP 等多种发布方式
+publish: # 配置自动更新服务器地址，支持 GitHub、S3、FTP 等多种发布方式
   provider: generic  # 更新服务提供者类型，如 github
   url: https://example.com/auto-updates
 electronDownload:
