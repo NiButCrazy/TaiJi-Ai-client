@@ -1,4 +1,4 @@
-import { store, local_config } from '../main/config.ts'
+import { store, local_config } from './config.ts'
 import { app, shell, BrowserWindow, ipcMain, nativeTheme, Menu, dialog, Tray, Notification } from 'electron'
 import { electronApp, optimizer, is } from '@electron-toolkit/utils'
 import { devtools_custom_font, load_extensions } from './devtools'
@@ -34,24 +34,25 @@ export function getAutoUpdater(): AppUpdater {
   return autoUpdater
 }
 
-// 自动更新
-const autoUpdater = getAutoUpdater()
-autoUpdater.checkForUpdates()
-
-autoUpdater.on('update-downloaded', (UpdateInfo) => {
-  const notification = new Notification({
-    title: `新版本 ${ UpdateInfo.version } 已准备就绪`,
-    body: `将在您关闭软件后静默更新`
+if (local_config.autoUpdate) {
+  // 自动更新
+  const autoUpdater = getAutoUpdater()
+  autoUpdater.checkForUpdates()
+  autoUpdater.on('update-downloaded', (UpdateInfo) => {
+    const notification = new Notification({
+      title: `新版本 ${ UpdateInfo.version } 已准备就绪`,
+      body: `将在您关闭软件后静默更新`
+    })
+    notification.on('click', () => {
+      if (mainWindow) {
+        if (mainWindow.isMinimized()) mainWindow.restore()
+        mainWindow.focus()
+        mainWindow.show()
+      }
+    })
+    notification.show()
   })
-  notification.on('click', () => {
-    if (mainWindow) {
-      if (mainWindow.isMinimized()) mainWindow.restore()
-      mainWindow.focus()
-      mainWindow.show()
-    }
-  })
-  notification.show()
-})
+}
 
 let mainWindow: BrowserWindow
 
@@ -82,7 +83,7 @@ function createWindow(): void {
   // 自定义开发者工具字体
   devtools_custom_font(mainWindow, 14)
 
-  var first_start = true
+  let first_start = true
   mainWindow.on('ready-to-show', () => {
     mainWindow.show()
 
@@ -239,6 +240,15 @@ app.whenReady().then(() => {
         {
           label: '软件版本: ' + app.getVersion(),
           enabled: false
+        },
+        {
+          label: '自动静默更新',
+          type: 'checkbox',
+          checked: local_config.autoUpdate,
+          click: () => {
+            local_config.autoUpdate = !local_config.autoUpdate
+            store.set('autoUpdate', local_config.autoUpdate)
+          }
         },
         {
           label: '开源仓库地址',

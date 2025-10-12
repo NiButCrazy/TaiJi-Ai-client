@@ -4,7 +4,8 @@ import Store from 'electron-store'
 const config = {
   isCloseToTray: false,
   closeConfirm: false,
-  scrollToBottom: true
+  scrollToBottom: true,
+  autoUpdate: true,
 }
 
 const store = new Store({ defaults: config })
