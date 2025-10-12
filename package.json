@@ -1,6 +1,6 @@
 {
   "name": "taiji-ai",
-  "version": "0.4.4",
+  "version": "0.4.5",
   "description": "太极Ai",
   "main": ".out/main/index.js",
   "author": "Ni But Crazy",
