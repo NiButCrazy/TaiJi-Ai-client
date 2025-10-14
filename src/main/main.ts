@@ -77,8 +77,6 @@ function createWindow(): void {
     mainWindow.setBackgroundColor(nativeTheme.shouldUseDarkColors ? '#1d273b' : '#F1F5F9')
   })
 
-  // nativeTheme.themeSource = local_config.theme
-
   // 自定义开发者工具字体
   devtools_custom_font(mainWindow, 14)
 
