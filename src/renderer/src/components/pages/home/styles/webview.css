@@ -41,3 +41,12 @@ body.theme-light .hljs::selection, body.theme-light .hljs ::selection {
 body.theme-dark .hljs::selection, body.theme-dark .hljs ::selection {
   background-color: rgba(77, 64, 127, 0.8) !important;
 }
+
+.n-message-container.n-message-container--top {
+  top: 55px !important;
+}
+
+.n-drawer.n-drawer--right-placement.n-drawer--native-scrollbar {
+  margin-top: 41px;
+}
+

@@ -7,22 +7,32 @@ function initChatFeatures(container, btn_container, input) {
       container.scrollTop = container.scrollHeight + 200
     }
   })
-  // 获取输入框的提示文本, 判断发送按键
-  const enter_text = document.querySelector('.chat-input-box .input-tools .text-xs.text-gray').innerText
+  let isKeyDown = false
 
   // 用事件委托监听键盘事件（输入框）
   input.addEventListener('keyup', function (event) {
     if (event.key === 'Enter') {
-      if (!enter_text) return
+      isKeyDown = false
+      const inputMode = JSON.parse(localStorage.getItem('userStore')).localSet.sendKey
 
       if (event.shiftKey) {
-        if (enter_text === 'Shift+Enter发送 / Enter换行') {
+        if (inputMode === 's-enter') {
           container.scrollTop = container.scrollHeight + 200
         }
       } else {
-        if (enter_text === 'Enter发送 / Shift+Enter换行') {
+        if (inputMode === 'enter') {
           container.scrollTop = container.scrollHeight + 200
         }
+      }
+    }
+  })
+
+  input.addEventListener('keydown', function (event) {
+    if (event.key === 'Enter') {
+      if (!isKeyDown) {
+        isKeyDown = true
+      } else {
+        event.preventDefault()
       }
     }
   })

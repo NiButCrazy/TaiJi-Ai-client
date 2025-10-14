@@ -6,6 +6,7 @@ interface AppEnv {
     isCloseToTray: boolean
     closeConfirm: boolean
     scrollToBottom: boolean
+    closeNotice: boolean
   }
 }
 

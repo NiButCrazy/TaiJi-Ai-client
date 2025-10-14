@@ -61,6 +61,8 @@ function createWindow(): void {
   mainWindow = new BrowserWindow({
     width: 1400,
     height: 850,
+    minWidth: 400,
+    minHeight: 500,
     show: false,
     frame: false,
     autoHideMenuBar: true,
@@ -70,7 +72,7 @@ function createWindow(): void {
     webPreferences: {
       preload: join(__dirname, '../preload/index.mjs'),
       sandbox: false,
-      webviewTag: true
+      webviewTag: true,
     }
   })
 
@@ -224,13 +226,23 @@ app.whenReady().then(() => {
       }
     },
     {
+      label: '永不提示公告',
+      type: 'checkbox',
+      checked: local_config.closeNotice,
+      click: () => {
+        local_config.closeNotice = !local_config.closeNotice
+        store.set('closeNotice', local_config.closeNotice)
+        mainWindow.webContents.send('close-notice', local_config.closeNotice)
+      }
+    },
+    {
       label: '自动滚至底部',
       type: 'checkbox',
       checked: local_config.scrollToBottom,
       click: () => {
         local_config.scrollToBottom = !local_config.scrollToBottom
         store.set('scrollToBottom', local_config.scrollToBottom)
-        BrowserWindow.getFocusedWindow()?.webContents.send('scroll-to-bottom', local_config.scrollToBottom)
+        mainWindow.webContents.send('scroll-to-bottom', local_config.scrollToBottom)
       }
     },
     { role: 'viewMenu', label: '高级' },
@@ -305,3 +317,15 @@ function createTray(mainWindow: BrowserWindow) {
     }
   })
 }
+
+// 处理链接跳转
+app.on('web-contents-created', (_, contents) => {
+  if (contents.getType() === 'webview') {
+    contents.setWindowOpenHandler(({ url }) => {
+      shell.openExternal(url)
+      return { action: 'deny' }
+    })
+  }
+})
+
+

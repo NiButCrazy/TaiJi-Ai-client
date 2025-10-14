@@ -6,6 +6,7 @@ const config = {
   closeConfirm: false,
   scrollToBottom: true,
   autoUpdate: true,
+  closeNotice: true
 }
 
 const store = new Store({ defaults: config })
