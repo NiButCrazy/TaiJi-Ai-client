@@ -16,14 +16,6 @@ if (!gotTheLock) {
   app.quit()
 }
 
-// 开发环境隔离用户数据
-if (is.dev) {
-  app.setPath('userData', app.getPath('userData') + '-dev')
-  console.log('[太极Ai] 开发环境用户数据：', app.getPath('userData'))
-} else {
-
-}
-
 export function getAutoUpdater(): AppUpdater {
   // 兼容ESM写法
   const { autoUpdater } = electronUpdater
@@ -57,6 +49,9 @@ if (local_config.autoUpdate) {
 let mainWindow: BrowserWindow
 
 function createWindow(): void {
+
+  nativeTheme.themeSource = local_config.theme
+
   // 创建浏览器窗口
   mainWindow = new BrowserWindow({
     width: 1400,
@@ -81,6 +76,8 @@ function createWindow(): void {
   nativeTheme.on('updated', () => {
     mainWindow.setBackgroundColor(nativeTheme.shouldUseDarkColors ? '#1d273b' : '#F1F5F9')
   })
+
+  // nativeTheme.themeSource = local_config.theme
 
   // 自定义开发者工具字体
   devtools_custom_font(mainWindow, 14)
@@ -205,6 +202,12 @@ app.whenReady().then(() => {
     contextMenu.popup()
   })
 
+  function toggleTheme(theme: 'light' | 'dark' | 'system') {
+    nativeTheme.themeSource = theme
+    local_config.theme = theme
+    store.set('theme', theme)
+  }
+
   // 右上角菜单
   const menuTemplate: Electron.MenuItemConstructorOptions[] = [
     {
@@ -243,6 +246,31 @@ app.whenReady().then(() => {
         local_config.scrollToBottom = !local_config.scrollToBottom
         store.set('scrollToBottom', local_config.scrollToBottom)
         mainWindow.webContents.send('scroll-to-bottom', local_config.scrollToBottom)
+      }
+    },
+    {
+      label: '系统主题',
+      submenu: [
+        {
+          type: 'radio',
+          label: '跟随系统',
+          checked: local_config.theme === 'system',
+          click: () => {toggleTheme('system')}
+        },
+        {
+          type: 'radio',
+          label: '浅色模式',
+          checked: local_config.theme === 'light',
+          click: () => {toggleTheme('light')}
+        },
+        {
+          type: 'radio', label: '深色模式',
+          checked: local_config.theme === 'dark',
+          click: () => {toggleTheme('dark')}
+        }
+      ],
+      click: () => {
+        console.log('系统主题')
       }
     },
     { role: 'viewMenu', label: '高级' },
