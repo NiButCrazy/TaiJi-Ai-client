@@ -1,6 +1,33 @@
 ## 更新日志
 
-## [v0.4.5](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.4.4...v0.4.5) -  v0.4.4..
+## [v0.5.0](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.4.5...v0.5.0) -  v0.4.5..
+
+#### :sparkles: 新功能
+
+-  添加了页内搜索功能和永久关闭公告的功能 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(7ee3a43)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/7ee3a4315aa0791d69a5e6c8a16ac21b684f27b3)
+	-  优化了enter/shift+enter的发送判断逻辑
+
+-  添加主题切换深色模式功能 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(3dbc539)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/3dbc539fbc8938e8fdab0de8047ef6b583cb2c8b)
+
+#### :bug: 修复
+
+-  修复了开发者工具扩展的加载问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(3f89916)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/3f89916887cc62811d8555445e7141d7d9696bee)
+
+-  修复了webview的事件监听没有取消订阅的BUG &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(f9bfd83)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/f9bfd83b06a7837b7ddc085c09a9e3dbd03af8bd)
+
+-  UI图片设置为禁止拖拽 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(42e532f)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/42e532f9cf676a8a8275fcc62cb40a8f60995d3d)
+
+#### :package: 杂项
+
+-  重命名idea项目名 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(58361ad)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/58361ad90f5666672984bf732517a48e5ec73167)
+
+-  删了一些冗余组件 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(888ee70)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/888ee709cfaf467f026b6fbb595796a4039e48b4)
+
+#### :books: 样式
+
+-  优化了导航菜单栏,使其跟随webview的背景颜色变化而变化 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(e81127b)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/e81127bbc6cc2102788a11eb4770ad9bedacc1db)
+
+## [v0.4.5](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.4.4...v0.4.5) -  2025/10/12 
 
 #### :sparkles: 新功能
 
