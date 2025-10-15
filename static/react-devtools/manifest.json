@@ -1,0 +1,44 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "icons/128-disabled.png",
+         "16": "icons/16-disabled.png",
+         "32": "icons/32-disabled.png",
+         "48": "icons/48-disabled.png"
+      },
+      "default_popup": "popups/disabled.html"
+   },
+   "background": {
+      "service_worker": "build/background.js"
+   },
+   "content_scripts": [ {
+      "js": [ "build/prepareInjection.js" ],
+      "matches": [ "\u003Call_urls>" ],
+      "run_at": "document_start"
+   } ],
+   "content_security_policy": {
+      "extension_pages": "script-src 'self'; object-src 'self'"
+   },
+   "description": "为 Chrome 添加了 React 调试工具，并修复了一些BUG\n\nCreated from revision 8c02ddf16a on 2025/7/12.",
+   "devtools_page": "main.html",
+   "host_permissions": [ "\u003Call_urls>" ],
+   "icons": {
+      "128": "icons/128-production.png",
+      "16": "icons/16-production.png",
+      "32": "icons/32-production.png",
+      "48": "icons/48-production.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxOMjl/Ehw+s83NNBZsTr43lkrZDDwpuW5pMYNjxIzt1FiGQ+qbq1HQqYQ5+Mlt329X0MZ8jxRtZg/mF7CyFYSGiPT4mD04EBiJJ/Zgf4ohJ9I3fg9Qu7xRNayE6hHo//jNGQ4yVRax1xt/BBEq3bD5+ijKrFpg1vlFNTz/y3eLg2vqesYdp5Q3Tf4zZ9xOK2rA95rUg/pFBpYFuc5c5ATPvf8gjyKvgtzun5qxn45vA0JJIKHqJSBG3H4l9msp9Xz1KBtLR0+WScXWRjWBnvhvP8rJR5IrjSWeTCj5zjm72+bE1P3joX7AgfeAL8Ta3C1lie9NxxR+2a+H7AX6HYaQIDAQAB",
+   "manifest_version": 3,
+   "minimum_chrome_version": "114",
+   "name": "React Developer Tools 汉化版",
+   "optional_permissions": [ "clipboardWrite" ],
+   "permissions": [ "scripting", "storage", "tabs" ],
+   "version": "6.1.5",
+   "version_name": "6.1.5 (2025/7/12)",
+   "web_accessible_resources": [ {
+      "extension_ids": [  ],
+      "matches": [ "\u003Call_urls>" ],
+      "resources": [ "main.html", "panel.html", "build/*.js" ]
+   } ]
+}

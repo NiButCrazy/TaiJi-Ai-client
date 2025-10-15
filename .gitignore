@@ -9,4 +9,3 @@ dist
 .out/preload/
 .out/renderer/
 .idea/vcs.xml
-static/react-devtools
