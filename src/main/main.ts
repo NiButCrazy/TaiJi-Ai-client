@@ -7,7 +7,7 @@ import { join } from 'path'
 import icon from '@static/icon.ico?asset'
 import logger from 'electron-log'
 
-
+// 创建一个单例锁
 const gotTheLock = app.requestSingleInstanceLock()
 
 if (!gotTheLock) {
@@ -16,6 +16,7 @@ if (!gotTheLock) {
   app.quit()
 }
 
+// 自动更新
 export function getAutoUpdater(): AppUpdater {
   // 兼容ESM写法
   const { autoUpdater } = electronUpdater
@@ -33,7 +34,7 @@ if (local_config.autoUpdate) {
   autoUpdater.on('update-downloaded', (UpdateInfo) => {
     const notification = new Notification({
       title: `新版本 ${ UpdateInfo.version } 已准备就绪`,
-      body: `将在您关闭软件后静默更新`
+      body: `将在您退出软件后静默更新`
     })
     notification.on('click', () => {
       if (mainWindow) {
@@ -48,6 +49,7 @@ if (local_config.autoUpdate) {
 
 let mainWindow: BrowserWindow
 
+// 创建主窗口
 function createWindow(): void {
 
   nativeTheme.themeSource = local_config.theme
@@ -73,22 +75,21 @@ function createWindow(): void {
 
   createTray(mainWindow)
 
+  // 只在开发环境加载扩展
+  if (is.dev) load_extensions(mainWindow)
+  // 自定义开发者工具字体
+  devtools_custom_font(mainWindow, 14)
+
   nativeTheme.on('updated', () => {
     mainWindow.setBackgroundColor(nativeTheme.shouldUseDarkColors ? '#1d273b' : '#F1F5F9')
   })
 
-  // 自定义开发者工具字体
-  devtools_custom_font(mainWindow, 14)
-
   let first_start = true
   mainWindow.on('ready-to-show', () => {
     mainWindow.show()
-
-    // 这里是第一次启动刷新重载是为了正确加载react开发工具扩展，否则需要手动刷新
     if (is.dev) {
       if (first_start) {
         first_start = false
-        mainWindow.reload()
         mainWindow.webContents.openDevTools()
       }
     }
@@ -103,22 +104,20 @@ function createWindow(): void {
   // 加载远程 URL 进行开发，或加载本地 html 文件进行生产。
   if (is.dev && process.env['ELECTRON_RENDERER_URL']) {
     mainWindow.loadURL(process.env['ELECTRON_RENDERER_URL'])
+
   } else {
     mainWindow.loadFile(join(__dirname, `../renderer/index.html`))
   }
-
 }
 
 // 当 Electron 完成初始化并准备好创建浏览器窗口时，将调用此方法
 // 某些 API 只能在此事件发生后使用
 app.whenReady().then(() => {
+
   // 为 Windows 设置应用用户模型 ID
   electronApp.setAppUserModelId('com.nbc.taiji-ai')
 
   ipcMain.handle('AppEnv', () => {return { local_config }})
-
-  // 只在开发环境加载扩展
-  if (is.dev) load_extensions()
 
   // 开发中 F12 的默认打开或关闭 DevTools
   // 并在生产环境中忽略 CommandOrControl + R
@@ -305,12 +304,12 @@ app.whenReady().then(() => {
     menu.popup()
   })
 
-  createWindow()
-
   app.on('activate', function () {
     // 在 macOS 上，当单击 Dock 图标并且没有打开其他窗口时，通常会在应用程序中重新创建一个窗口
     if (BrowserWindow.getAllWindows().length === 0) createWindow()
   })
+
+  createWindow()
 })
 
 // 当所有窗口都关闭时退出，macOS 除外：

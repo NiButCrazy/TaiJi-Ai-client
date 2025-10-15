@@ -8,7 +8,7 @@ import menu from '../assets/images/menu.svg'
 import search from '../assets/images/search.svg'
 import next from '../assets/images/down.svg'
 import prev from '../assets/images/up.svg'
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { ElectronWebview } from '@components/pages/home/lib/Home.tsx'
 
 
@@ -19,6 +19,7 @@ function App(): React.JSX.Element {
   const webviewRef = useRef<ElectronWebview>(null)
   const inputRef = useRef<HTMLInputElement>(null)
   const countRef = useRef<HTMLSpanElement>(null)
+  const [ headerColor, setHeaderColor ] = useState(false)
 
   function searchText(action: string) {
     const text = inputRef.current?.value
@@ -56,7 +57,7 @@ function App(): React.JSX.Element {
       <div className={ s_.appHeaderButton } onClick={ () => {setAppHeaderVisible(!appHeaderVisible)} }>
         <img src={ logo } alt={ 'logo' } />
       </div>
-      <div className={ s_.appHeader + (appHeaderVisible ? ' ' + s_.show : '') }>
+      <div className={ s_.appHeader + (appHeaderVisible ? ' ' + s_.show : '') + (headerColor ? '' : ' ' + s_.noFind) }>
         <span className={ s_.placeholder }></span>
         <div className={ s_.appHeaderDrag }></div>
         <div className={ s_.searchContainer + (searchVisible ? '' : ' ' + s_.hidden) }>
@@ -88,7 +89,7 @@ function App(): React.JSX.Element {
         <span onClick={ () => {window.electron.ipcRenderer.send('close')} } className={ s_.close }>
           <img src={ close } alt={ 'close' } /></span>
       </div>
-      <Outlet context={ { webviewRef, countRef } } />
+      <Outlet context={ { webviewRef, countRef, setHeaderColor } } />
     </>
   )
 }

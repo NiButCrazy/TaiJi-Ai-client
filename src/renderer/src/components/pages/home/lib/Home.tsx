@@ -25,6 +25,7 @@ export default function Home() {
   const routerContext = useOutletContext<{
     webviewRef: React.RefObject<ElectronWebview | null>
     countRef: React.RefObject<HTMLSpanElement | null>
+    setHeaderColor: (bool: boolean) => void
   }>()
   const countRef = routerContext.countRef
 
@@ -54,17 +55,18 @@ export default function Home() {
     const webview = ref.current!
     routerContext.webviewRef.current = webview
 
-    webview.addEventListener('found-in-page', (e: any) => {
+    function foudInPage(e) {
       const { activeMatchOrdinal, matches }: { activeMatchOrdinal: number, matches: number } = e.result
       countRef.current!.innerText = activeMatchOrdinal + '/' + matches
-    })
+    }
 
-    webview.addEventListener('context-menu', (e) => {
+    function contextMenu(e) {
       window.electron.ipcRenderer.send('webview-context-menu', e)
       e.preventDefault()
-    })
+    }
 
-    webview.addEventListener('dom-ready', () => {
+    function domReady() {
+
       webview.insertCSS(webviewCSS)
 
       if (scrollToBottom) {
@@ -73,12 +75,29 @@ export default function Home() {
       if (closeNotice) {
         webview.executeJavaScript(webviewJSNotice)
       }
-    })
+    }
+
+    function consoleMessage(e) {
+      if (e.level === 1) {
+        if (e.message === '[太极Ai] 找到全局头部，继续监听容器加载...') {
+          webview.removeEventListener('console-message', consoleMessage)
+          routerContext.setHeaderColor(true)
+        }
+      }
+    }
+
+    webview.addEventListener('dom-ready', domReady)
+    webview.addEventListener('context-menu', contextMenu)
+    webview.addEventListener('found-in-page', foudInPage)
+    webview.addEventListener('console-message', consoleMessage)
 
     return () => {
-      webview.removeEventListener('dom-ready', () => {})
-      webview.removeEventListener('context-menu', () => {})
-      webview.removeEventListener('found-in-page', () => {})
+      webview.removeEventListener('dom-ready', domReady)
+      webview.removeEventListener('context-menu', contextMenu)
+      webview.removeEventListener('found-in-page', foudInPage)
+      webview.removeEventListener('console-message', consoleMessage)
+      window.electron.ipcRenderer.removeAllListeners('close-notice')
+      window.electron.ipcRenderer.removeAllListeners('scroll-to-bottom')
     }
   })
 
