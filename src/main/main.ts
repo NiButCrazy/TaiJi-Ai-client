@@ -303,6 +303,30 @@ app.whenReady().then(() => {
   ipcMain.on('menu', () => {
     menu.popup()
   })
+  let isSearchTriggered = false
+
+  // 创建应用程序菜单，相当于快捷键
+  const appMenuTemplate = [
+    {
+      label: '搜索',
+      accelerator: 'CmdOrCtrl+F', // macOS -> Command+F, Windows/Linux -> Ctrl+F
+      click: () => {
+        // 通过 IPC 给渲染进程发送“打开搜索框”指令
+        if (isSearchTriggered) return // 已触发，直接返回
+
+        isSearchTriggered = true
+        mainWindow.webContents.send('trigger-search') // 发送事件到渲染进程
+
+        // 设置一个延时，确保用户松开按键后才允许再次触发
+        setTimeout(() => {
+          isSearchTriggered = false
+        }, 200) // 0.2 秒延迟防抖
+      }
+    }
+  ]
+
+  const appMenu = Menu.buildFromTemplate(appMenuTemplate)
+  Menu.setApplicationMenu(appMenu)
 
   app.on('activate', function () {
     // 在 macOS 上，当单击 Dock 图标并且没有打开其他窗口时，通常会在应用程序中重新创建一个窗口

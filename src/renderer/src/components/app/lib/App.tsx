@@ -8,7 +8,7 @@ import menu from '../assets/images/menu.svg'
 import search from '../assets/images/search.svg'
 import next from '../assets/images/down.svg'
 import prev from '../assets/images/up.svg'
-import React, { useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { ElectronWebview } from '@components/pages/home/lib/Home.tsx'
 
 
@@ -51,6 +51,17 @@ function App(): React.JSX.Element {
       searchText('next')
     }
   }
+
+  useEffect(() => {
+    // 快捷键切换页内搜索
+    window.electron.ipcRenderer.on('trigger-search', () => {
+      if (searchVisible) {webviewRef.current?.stopFindInPage('clearSelection')}
+      setSearchVisible(!searchVisible)
+    })
+    return () => {
+      window.electron.ipcRenderer.removeAllListeners('trigger-search')
+    }
+  })
 
   return (
     <>
