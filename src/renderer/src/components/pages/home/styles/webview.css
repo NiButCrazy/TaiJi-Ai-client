@@ -50,3 +50,7 @@ body.theme-dark .hljs::selection, body.theme-dark .hljs ::selection {
   margin-top: 41px;
 }
 
+/*冗余滚动条*/
+.chat-box .chat-items::-webkit-scrollbar {
+  display: none;
+}

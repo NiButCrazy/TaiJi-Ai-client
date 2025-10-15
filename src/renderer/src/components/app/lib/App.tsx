@@ -8,7 +8,7 @@ import menu from '../assets/images/menu.svg'
 import search from '../assets/images/search.svg'
 import next from '../assets/images/down.svg'
 import prev from '../assets/images/up.svg'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useRef, useState } from 'react'
 import { ElectronWebview } from '@components/pages/home/lib/Home.tsx'
 
 
@@ -54,7 +54,8 @@ function App(): React.JSX.Element {
 
   return (
     <>
-      <div className={ s_.appHeaderButton } onClick={ () => {setAppHeaderVisible(!appHeaderVisible)} }>
+      <div className={ s_.appHeaderButton + (headerColor ? '' : ' ' + s_.hidden) }
+           onClick={ () => {setAppHeaderVisible(!appHeaderVisible)} }>
         <img src={ logo } alt={ 'logo' } />
       </div>
       <div className={ s_.appHeader + (appHeaderVisible ? ' ' + s_.show : '') + (headerColor ? '' : ' ' + s_.noFind) }>
