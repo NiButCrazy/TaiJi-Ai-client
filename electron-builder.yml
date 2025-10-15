@@ -12,6 +12,7 @@ files: # 指定需要包含在最终打包中的文件和文件夹，通常包�
   - '!{tsconfig.json,tsconfig.node.json,tsconfig.app.json}'
   - '!{.out/dist,.out/build}'
   - '!static/snap'
+  - '!static/react-devtools'
   - '!desktop.ini'
 win: # 配置 Windows 平台的打包选项
   executableName: taiji-ai  # 设置生成的可执行文件名称

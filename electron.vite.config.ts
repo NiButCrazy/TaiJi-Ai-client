@@ -2,7 +2,7 @@ import { defineConfig, externalizeDepsPlugin } from 'electron-vite'
 import { resolve } from 'path'
 import react from '@vitejs/plugin-react'
 
-
+// noinspection JSUnusedGlobalSymbols
 export default defineConfig({
   main: {
     plugins: [ externalizeDepsPlugin() ],
