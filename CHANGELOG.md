@@ -1,6 +1,22 @@
 ## 更新日志
 
-## [v0.5.0](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.4.5...v0.5.0) -  v0.4.5..
+## [v0.5.1](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.5.0...v0.5.1) -  v0.5.0..
+
+#### :package: 杂项
+
+-  忘记把react-devtools添加进来了 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(3aada8d)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/3aada8da34e948a900740fa5e6fad24bd76568fe)
+
+#### :book: 文档
+
+-  更新了自述文件 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(0d88571)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/0d8857193e02b5b7b66a5c85e5ca005ef13c5f92)
+	-  顺便添加了搜索快捷键
+
+#### :books: 样式
+
+-  去除了冗余滚动条 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(e10115b)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/e10115b11e7cff3519a2d139716602dc88b4f759)
+	-  顺便启动时的把左上角的按钮给隐藏了
+
+## [v0.5.0](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.4.5...v0.5.0) -  2025/10/15 
 
 #### :sparkles: 新功能
 
