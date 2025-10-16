@@ -1,6 +1,13 @@
 ## 更新日志
 
-## [v0.5.1](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.5.0...v0.5.1) -  v0.5.0..
+## [v0.5.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.5.1...v0.5.2) -  v0.5.1..
+
+#### :bug: 修复
+
+-  修复了切换页面后JS无法加载的问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(d49a290)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/d49a290f839690f8f7a55ed78b11f943cbffe902)
+	-  代价是性能开销稍增长了一丝
+
+## [v0.5.1](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.5.0...v0.5.1) -  2025/10/15 
 
 #### :package: 杂项
 
