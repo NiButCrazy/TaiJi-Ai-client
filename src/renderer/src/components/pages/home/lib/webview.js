@@ -41,26 +41,35 @@ function initChatFeatures(container, btn_container, input) {
 }
 
 function waitForChatContainer() {
+
+  const path = window.location.pathname
+  if (path !== '/chat') {
+    window.isFirstLoad = false
+    return
+  }
+
+  if (window.isFirstLoad) {return}
+
+  window.isFirstLoad = true
   console.log('[太极Ai] 等待容器加载...')
   let isFindHeader = false
   const observer = new MutationObserver((mutations) => {
     for (const mutation of mutations) {
       if (mutation.type === 'childList') {
-        if (!isFindHeader) {
+        if (!isFindHeader && !window.hasFindHeader) {
           const header = document.body.querySelector('.global-header')
           if (header) {
             isFindHeader = true
             console.info('[太极Ai] 找到全局头部，继续监听容器加载...')
+            window.hasFindHeader = true
           }
-          // 优化性能,大幅较少 querySelector 运行次数
-          return
         }
         for (const node of mutation.addedNodes) {
           if (node.nodeType === 1) {
-            const container = node.querySelector('#chat-content .n-scrollbar-container')
+            const container = document.body.querySelector('#chat-content .n-scrollbar-container')
             if (container) {
-              const btn_container = node.querySelector('.chat-input-box .input-tools')
-              const input = node.querySelector('.chat-input-box textarea.n-input__textarea-el')
+              const btn_container = document.body.querySelector('.chat-input-box .input-tools')
+              const input = document.body.querySelector('.chat-input-box textarea.n-input__textarea-el')
               // 绑定事件委托
               initChatFeatures(container, btn_container, input)
               observer.disconnect() // 找到容器后停止监听

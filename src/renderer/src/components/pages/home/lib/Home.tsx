@@ -77,6 +77,12 @@ export default function Home() {
       }
     }
 
+    function navigateInPage() {
+      if (scrollToBottom) {
+        webview.executeJavaScript(webviewJS)
+      }
+    }
+
     function consoleMessage(e) {
       if (e.level === 1) {
         if (e.message === '[太极Ai] 找到全局头部，继续监听容器加载...') {
@@ -90,12 +96,14 @@ export default function Home() {
     webview.addEventListener('context-menu', contextMenu)
     webview.addEventListener('found-in-page', foudInPage)
     webview.addEventListener('console-message', consoleMessage)
+    webview.addEventListener('did-navigate-in-page', navigateInPage)
 
     return () => {
       webview.removeEventListener('dom-ready', domReady)
       webview.removeEventListener('context-menu', contextMenu)
       webview.removeEventListener('found-in-page', foudInPage)
       webview.removeEventListener('console-message', consoleMessage)
+      webview.removeEventListener('did-navigate-in-page', navigateInPage)
       window.electron.ipcRenderer.removeAllListeners('close-notice')
       window.electron.ipcRenderer.removeAllListeners('scroll-to-bottom')
     }

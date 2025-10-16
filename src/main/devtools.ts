@@ -75,7 +75,7 @@ export function load_extensions(mainWindow: BrowserWindow) {
   ses.extensions.loadExtension(reactDevtools)
   // ! 点睛之笔!!!
   //  React 开发者工具的内容脚本尝试与后台服务工作者通信，而后者在启动时（首次安装后）并未运行,所以手动运行
-  ses.extensions.on('extension-loaded', (_, extension) => {
+  ses.extensions.on('extension-ready', (_, extension) => {
     const manifest = extension.manifest
     if (manifest.manifest_version === 3 && manifest?.background?.service_worker) {
       ses.serviceWorkers.startWorkerForScope(extension.url)
