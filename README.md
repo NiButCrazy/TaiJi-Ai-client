@@ -4,6 +4,8 @@
 
 一个基于electron的非官方客户端，该项目改善原客户端依托答辩的使用体验，并添加了更多功能。
 
+> Android 版项目地址：[点我跳转](https://github.com/NiButCrazy/TaiJi-Ai-client-Android)
+
 #### 目前实现功能如下:
 
 - [x] 窗口操作栏（窗口拖拽移动、最小化、最大化、关闭）
