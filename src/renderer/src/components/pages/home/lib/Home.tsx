@@ -42,11 +42,11 @@ export default function Home() {
         webview.executeJavaScript(webviewJSNotice)
       } else {
         webview.executeJavaScript(`
-      (function () {
-      const userStore = JSON.parse(localStorage.getItem('userStore'))
-  userStore.sys.userNotifyClose = null
-  localStorage.setItem('userStore', JSON.stringify(userStore))})()
-      `)
+          (function () {
+          const userStore = JSON.parse(localStorage.getItem('userStore'))
+      userStore.sys.userNotifyClose = null
+      localStorage.setItem('userStore', JSON.stringify(userStore))})()
+          `)
       }
 
     })
