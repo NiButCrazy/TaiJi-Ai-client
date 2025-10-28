@@ -1,6 +1,12 @@
 ## :memo: 更新日志
 
-## [v0.5.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.5.2...v0.5.3) -  v0.5.2..
+## [v0.5.4](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.5.3...v0.5.4) -  v0.5.3..
+
+#### :sparkles: 新功能
+
+-  添加重启软件的确认框 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(f48328c)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/f48328ce1e57dc4d3b52a2c8ace5409e04ba31ef)
+
+## [v0.5.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.5.2...v0.5.3) -  2025/10/28 
 
 #### :book: 文档
 
