@@ -30,6 +30,23 @@ export function getAutoUpdater(): AppUpdater {
 if (local_config.autoUpdate) {
   // 自动更新
   const autoUpdater = getAutoUpdater()
+
+  // 关闭确认框
+  async function showUpdateConfirm() {
+    const result = await dialog.showMessageBox({
+      type: 'info',             // 样式：question 、info 、warning ...
+      title: '即将重启',
+      message: '确定要退出并更新软件吗',
+      buttons: [ '稍后再说', '现在重启' ],      // 按钮文本
+      defaultId: 1,                  // 默认选中“确定”按钮
+      cancelId: 0                    // 点击 ESC 或关闭时返回这个 id
+    })
+
+    if (result.response === 1) {
+      autoUpdater.quitAndInstall()
+    }
+  }
+
   autoUpdater.checkForUpdates()
   autoUpdater.on('update-downloaded', (UpdateInfo) => {
     const notification = new Notification({
@@ -38,9 +55,7 @@ if (local_config.autoUpdate) {
     })
     notification.on('click', () => {
       if (mainWindow) {
-        if (mainWindow.isMinimized()) mainWindow.restore()
-        mainWindow.focus()
-        mainWindow.show()
+        showUpdateConfirm()
       }
     })
     notification.show()
@@ -161,7 +176,7 @@ app.whenReady().then(() => {
   async function showConfirm(window: BrowserWindow) {
     const result = await dialog.showMessageBox(window, {
       type: 'info',             // 样式：question 、info 、warning ...
-      title: '确认操作',
+      title: '即将退出软件',
       message: '确定要退出吗？',
       buttons: [ '取消', '确定' ],      // 按钮文本
       defaultId: 1,                  // 默认选中“确定”按钮
