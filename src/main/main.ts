@@ -7,6 +7,14 @@ import { join } from 'path'
 import icon from '@static/icon.ico?asset'
 import logger from 'electron-log'
 
+
+if (is.dev) {
+  electronApp.setAppUserModelId('com.nbc.taiji-ai-dev')
+} else {
+  // 为 Windows 设置应用用户模型 ID
+  electronApp.setAppUserModelId('com.nbc.taiji-ai')
+}
+
 // 创建一个单例锁
 const gotTheLock = app.requestSingleInstanceLock()
 
@@ -128,9 +136,6 @@ function createWindow(): void {
 // 当 Electron 完成初始化并准备好创建浏览器窗口时，将调用此方法
 // 某些 API 只能在此事件发生后使用
 app.whenReady().then(() => {
-
-  // 为 Windows 设置应用用户模型 ID
-  electronApp.setAppUserModelId('com.nbc.taiji-ai')
 
   ipcMain.handle('AppEnv', () => {return { local_config }})
 
