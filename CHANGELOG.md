@@ -1,6 +1,12 @@
 ## :memo: 更新日志
 
-## [v0.5.4](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.5.3...v0.5.4) -  v0.5.3..
+## [v0.5.5](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.5.4...v0.5.5) -  v0.5.4..
+
+#### :bug: 修复
+
+-  为开发模式单独设置ID,防止和生产版实例冲突 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(7011f30)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/7011f302d32afdf6ec8651bb64e90d5adf94ea5a)
+
+## [v0.5.4](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.5.3...v0.5.4) -  2025/10/28 
 
 #### :sparkles: 新功能
 
