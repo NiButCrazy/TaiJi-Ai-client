@@ -1,9 +1,9 @@
 import s_ from '../styles/Home.module.less'
-import React, { useEffect, useRef } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import webviewJS from './webview.js?raw'
 import webviewJSNotice from './notice.js?raw'
 import webviewCSS from '../styles/webview.css?raw'
-import { useOutletContext } from 'react-router'
+import { useOutletContext, useNavigate } from 'react-router'
 
 
 export interface ElectronWebview extends HTMLWebViewElement {
@@ -22,6 +22,8 @@ let closeNotice = localConfig.closeNotice
 
 export default function Home() {
   const ref = useRef<ElectronWebview>(null)
+  const navigate = useNavigate()
+  // const [ is_failed, setIsFailed ] = useState(false)
   const routerContext = useOutletContext<{
     webviewRef: React.RefObject<ElectronWebview | null>
     countRef: React.RefObject<HTMLSpanElement | null>
@@ -55,12 +57,12 @@ export default function Home() {
     const webview = ref.current!
     routerContext.webviewRef.current = webview
 
-    function foudInPage(e) {
+    function foudInPage(e: any) {
       const { activeMatchOrdinal, matches }: { activeMatchOrdinal: number, matches: number } = e.result
       countRef.current!.innerText = activeMatchOrdinal + '/' + matches
     }
 
-    function contextMenu(e) {
+    function contextMenu(e: any) {
       window.electron.ipcRenderer.send('webview-context-menu', e)
       e.preventDefault()
     }
@@ -92,11 +94,14 @@ export default function Home() {
       }
     }
 
+    function fail_load() {navigate('/404')}
+
     webview.addEventListener('dom-ready', domReady)
     webview.addEventListener('context-menu', contextMenu)
     webview.addEventListener('found-in-page', foudInPage)
     webview.addEventListener('console-message', consoleMessage)
     webview.addEventListener('did-navigate-in-page', navigateInPage)
+    webview.addEventListener('did-fail-load', fail_load)
 
     return () => {
       webview.removeEventListener('dom-ready', domReady)
@@ -104,6 +109,7 @@ export default function Home() {
       webview.removeEventListener('found-in-page', foudInPage)
       webview.removeEventListener('console-message', consoleMessage)
       webview.removeEventListener('did-navigate-in-page', navigateInPage)
+      webview.removeEventListener('did-fail-load', fail_load)
       window.electron.ipcRenderer.removeAllListeners('close-notice')
       window.electron.ipcRenderer.removeAllListeners('scroll-to-bottom')
     }
@@ -112,6 +118,6 @@ export default function Home() {
   return (
     // @ts-ignore*
     <webview allowpopups="true"
-             ref={ ref } src="https://www.aiboss.chat/chat" className={ s_.iframe } />
+             ref={ ref } src="https://www.tiandaoai666.com/chat" className={ s_.iframe } />
   )
 }

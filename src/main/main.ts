@@ -369,7 +369,12 @@ function createTray(mainWindow: BrowserWindow) {
 
   const tray = new Tray(icon)
   // 鼠标悬停提示
-  tray.setToolTip('太极AI')
+  if (is.dev) {
+    tray.setToolTip('太极AI - 开发版')
+  } else {
+    tray.setToolTip('太极AI')
+  }
+
   // 托盘菜单
   const contextMenu = Menu.buildFromTemplate([
     { label: '显示主窗口', click: () => mainWindow.show() },
