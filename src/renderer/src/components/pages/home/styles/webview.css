@@ -23,6 +23,7 @@ body.theme-dark::selection {
 #chat-content {
   -webkit-user-select: text;
   user-select: text;
+  border-radius: 10px;
 }
 
 .n-layout--static-positioned.selectable {
