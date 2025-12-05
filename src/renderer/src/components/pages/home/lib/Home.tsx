@@ -118,6 +118,6 @@ export default function Home() {
   return (
     // @ts-ignore*
     <webview allowpopups="true"
-             ref={ ref } src="https://www.tiandaoai66d6.com/chat" className={ s_.iframe } />
+             ref={ ref } src="https://www.tiandaoai666.com/chat" className={ s_.iframe } />
   )
 }
