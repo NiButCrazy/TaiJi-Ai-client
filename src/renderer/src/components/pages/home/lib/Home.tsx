@@ -1,5 +1,5 @@
 import s_ from '../styles/Home.module.less'
-import React, { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef } from 'react'
 import webviewJS from './webview.js?raw'
 import webviewJSNotice from './notice.js?raw'
 import webviewCSS from '../styles/webview.css?raw'
@@ -94,7 +94,10 @@ export default function Home() {
       }
     }
 
-    function fail_load() {navigate('/404')}
+    function fail_load(e) {
+      console.error(e)
+      navigate('/404')
+    }
 
     webview.addEventListener('dom-ready', domReady)
     webview.addEventListener('context-menu', contextMenu)
