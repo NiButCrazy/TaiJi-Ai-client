@@ -1,6 +1,12 @@
 ## :memo: 更新日志
 
-## [v0.6.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.1...v0.6.2) -  v0.6.1..
+## [v0.6.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.2...v0.6.3) -  v0.6.2..
+
+#### :bug: 修复
+
+-  添加了404页面刷新功能 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(1df10d7)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/1df10d7bebc8895ed6e0627f1b367e55537f76b2)
+
+## [v0.6.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.1...v0.6.2) -  2025/12/05 
 
 #### :bug: 修复
 
