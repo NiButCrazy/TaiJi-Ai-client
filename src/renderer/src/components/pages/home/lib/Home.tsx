@@ -94,9 +94,17 @@ export default function Home() {
       }
     }
 
-    function fail_load(e) {
-      console.error(e)
-      navigate('/404')
+    function fail_load(e: any) {
+      switch (e.errorDescription) {
+        case 'ERR_CONNECTION_REFUSED':
+        case 'ERR_CONNECTION_CLOSED':
+          console.warn(e)
+          break
+        default :
+          console.error('网页加载失败')
+          console.error(e)
+          navigate('/404')
+      }
     }
 
     webview.addEventListener('dom-ready', domReady)
