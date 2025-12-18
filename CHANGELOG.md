@@ -1,6 +1,12 @@
 ## :memo: 更新日志
 
-## [v0.6.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.2...v0.6.3) -  v0.6.2..
+## [v0.6.4](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.3...v0.6.4) -  v0.6.3..
+
+#### :bug: 修复
+
+-  修复了部分网页重载问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(0c36b23)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/0c36b23f36baf442e10c282af33301d1324cbef0)
+
+## [v0.6.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.2...v0.6.3) -  2025/12/13 
 
 #### :bug: 修复
 
