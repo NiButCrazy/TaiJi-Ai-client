@@ -99,6 +99,7 @@ export default function Home() {
         case 'ERR_CONNECTION_REFUSED':
         case 'ERR_CONNECTION_CLOSED':
           console.warn(e)
+          webview.reload()
           break
         default :
           console.error('网页加载失败')
