@@ -1,6 +1,12 @@
 ## :memo: 更新日志
 
-## [v0.6.5](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.4...v0.6.5) -  v0.6.4..
+## [v0.6.6](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.5...v0.6.6) -  v0.6.5..
+
+#### :bug: 修复
+
+-  新域名更新 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(4ce280a)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/4ce280a69be13f43bce656b284d62fc665126158)
+
+## [v0.6.5](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.4...v0.6.5) -  2025/12/25 
 
 #### :sparkles: 新功能
 
