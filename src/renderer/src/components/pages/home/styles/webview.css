@@ -55,3 +55,7 @@ body.theme-dark .hljs::selection, body.theme-dark .hljs ::selection {
 .chat-box .chat-items::-webkit-scrollbar {
   display: none;
 }
+
+.chat-item.ai .mt-2.text-xs.text-muted > p {
+  display: none;
+}
