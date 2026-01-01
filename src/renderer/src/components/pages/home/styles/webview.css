@@ -59,3 +59,16 @@ body.theme-dark .hljs::selection, body.theme-dark .hljs ::selection {
 .chat-item.ai .mt-2.text-xs.text-muted > p {
   display: none;
 }
+
+.n-layout-sider-scroll-container .n-menu-item:nth-child(5) {
+  display: none;
+}
+
+.n-layout-sider-scroll-container .n-menu-item:nth-child(6) {
+  display: none;
+}
+
+.n-layout-sider-scroll-container .n-menu-item:nth-child(7) {
+  display: none;
+}
+
