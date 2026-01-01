@@ -1,6 +1,12 @@
 ## :memo: 更新日志
 
-## [v0.6.6](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.5...v0.6.6) -  v0.6.5..
+## [v0.6.7](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.6...v0.6.7) -  v0.6.6..
+
+#### :sparkles: 新功能
+
+-  删除了几个无用的菜单栏 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(b4d66b5)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/b4d66b54561d08cdc8d33bcb36cf5fb9346428a8)
+
+## [v0.6.6](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.5...v0.6.6) -  2025/12/30 
 
 #### :bug: 修复
 
