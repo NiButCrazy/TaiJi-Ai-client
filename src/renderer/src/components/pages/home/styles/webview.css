@@ -1,11 +1,15 @@
-.n-scrollbar-container .n-scrollbar-content .n-alert-body.n-alert-body--bordered {
-  display: none
-}
+/*隐藏顶部应用加载条*/
+/*.n-scrollbar-container .n-scrollbar-content .n-alert-body.n-alert-body--bordered {*/
+/*  display: none*/
+/*}*/
 
-.n-scrollbar-container .n-scrollbar-content .n-alert__border {
-  display: none
-}
+/*.n-scrollbar-container .n-scrollbar-content .n-alert__border {*/
+/*  display: none*/
+/*}*/
 
+:root {
+  --nbc-bg-color: #FFFFFF;
+}
 
 body {
   user-select: none;
@@ -19,6 +23,12 @@ body.theme-dark::selection {
   background-color: rgba(53, 42, 94, 1);
 }
 
+body.theme-dark {
+  --nbc-bg-color: #000000;
+  /*--aa-bg-body: #1d273b !important;*/
+  /*--aa-bg-second: rgba(53, 42, 94, 1) !important;*/
+
+}
 
 #chat-content {
   -webkit-user-select: text;
@@ -26,40 +36,58 @@ body.theme-dark::selection {
   border-radius: 10px;
 }
 
+/*ai模型图标圆角*/
+.chat-header .truncate img.w-full {
+  border-radius: 50%;
+}
+
 .n-layout--static-positioned.selectable {
   -webkit-user-select: none;
 }
 
-span.clickable.flex.items-center:hover {
-  color: #b1a4fd;
+.mt-2.text-xs.text-muted.chat-toolbar {
+  user-select: none;
 }
 
-body.theme-light .hljs::selection, body.theme-light .hljs ::selection {
-  background-color: rgba(237, 228, 254, 1) !important;
-  color: inherit !important;
+.line-numbers, .code-block-header {
+  user-select: none;
 }
 
-body.theme-dark .hljs::selection, body.theme-dark .hljs ::selection {
-  background-color: rgba(77, 64, 127, 0.8) !important;
-}
+/*span.clickable.flex.items-center:hover {*/
+/*  color: #b1a4fd;*/
+/*}*/
 
+/*body.theme-light .hljs::selection, body.theme-light .hljs ::selection {*/
+/*  background-color: rgba(237, 228, 254, 1) !important;*/
+/*  color: inherit !important;*/
+/*}*/
+
+/*body.theme-dark .hljs::selection, body.theme-dark .hljs ::selection {*/
+/*  background-color: rgba(77, 64, 127, 0.8) !important;*/
+/*}*/
+
+/*消息提示toast的位置*/
 .n-message-container.n-message-container--top {
   top: 55px !important;
 }
 
+/*配置弹出界面的顶部距离*/
 .n-drawer.n-drawer--right-placement.n-drawer--native-scrollbar {
   margin-top: 41px;
 }
 
-/*冗余滚动条*/
-.chat-box .chat-items::-webkit-scrollbar {
-  display: none;
-}
+/*!*冗余滚动条*!*/
+/*.chat-box .chat-items::-webkit-scrollbar {*/
+/*  display: none;*/
+/*}*/
 
+/*隐藏AI回复的提示:请勿xxx用于非法用途*/
 .chat-item.ai .mt-2.text-xs.text-muted > p {
   display: none;
 }
 
+
+/*隐藏侧边栏多余的项目*/
 .n-layout-sider-scroll-container .n-menu-item:nth-child(5) {
   display: none;
 }
@@ -72,3 +100,40 @@ body.theme-dark .hljs::selection, body.theme-dark .hljs ::selection {
   display: none;
 }
 
+.n-notification-container.n-notification-container--scrollable.n-notification-container--top-right {
+  margin-top: 40px;
+}
+
+.n-card.n-modal.draw-resource-modal-shell {
+  margin-top: 40px;
+}
+
+/*聊天列表项ai背景色*/
+.chat-item.mode-list.ai {
+  background-color: var(--aa-bg-body) !important;
+}
+
+/*聊天列表项用户背景色*/
+.chat-item.mode-list.user {
+  background-color: inherit !important;
+}
+
+/*聊天输入框过渡效果*/
+.chat-input-box {
+  transition: background-color 0.2s, left .3s, right .3s, padding .3s !important;
+}
+
+/*聊天输入框背景色*/
+.chat-input-box:has( .n-input--focus) {
+  background-color: var(--nbc-bg-color) !important;
+}
+
+
+._to-bottom {
+  right: 20px;
+  /*bottom: 0 !important;*/
+  position: fixed !important;
+  top: 117px;
+  left: auto !important;
+  transform: none !important;
+}

@@ -33,23 +33,26 @@ export default function Home() {
 
   useEffect(() => {
 
-    window.electron.ipcRenderer.on('scroll-to-bottom', (_, bool: boolean) => {
-      scrollToBottom = bool
-      webview.reload()
+    // window.electron.ipcRenderer.on('scroll-to-bottom', (_, bool: boolean) => {
+    //   scrollToBottom = bool
+    //   webview.reload()
+    // })
+    window.electron.ipcRenderer.on('open-devtools', (_) => {
+      webview.openDevTools()
     })
 
     window.electron.ipcRenderer.on('close-notice', (_, bool: boolean) => {
-      closeNotice = bool
-      if (closeNotice) {
-        webview.executeJavaScript(webviewJSNotice)
-      } else {
-        webview.executeJavaScript(`
-          (function () {
-          const userStore = JSON.parse(localStorage.getItem('userStore'))
-      userStore.sys.userNotifyClose = null
-      localStorage.setItem('userStore', JSON.stringify(userStore))})()
-          `)
-      }
+      // closeNotice = bool
+      // if (closeNotice) {
+      //   webview.executeJavaScript(webviewJSNotice)
+      // } else {
+      //   webview.executeJavaScript(`
+      //     (function () {
+      //     const userStore = JSON.parse(localStorage.getItem('userStore'))
+      // userStore.sys.userNotifyClose = null
+      // localStorage.setItem('userStore', JSON.stringify(userStore))})()
+      //     `)
+      // }
 
     })
 
@@ -71,23 +74,26 @@ export default function Home() {
 
       webview.insertCSS(webviewCSS)
 
-      if (scrollToBottom) {
-        webview.executeJavaScript(webviewJS)
-      }
-      if (closeNotice) {
-        webview.executeJavaScript(webviewJSNotice)
-      }
+      // if (scrollToBottom) {
+      webview.executeJavaScript(webviewJS)
+      // }
+      // if (closeNotice) {
+      //   webview.executeJavaScript(webviewJSNotice)
+      // }
     }
 
-    function navigateInPage() {
-      if (scrollToBottom) {
-        webview.executeJavaScript(webviewJS)
-      }
+    function navigateInPage(e) {
+      // console.log(e)
+      // if (scrollToBottom) {
+      webview.executeJavaScript(webviewJS)
+      // webview.executeJavaScript('_scroll_to_bottom()')
+      // }
     }
 
     function consoleMessage(e) {
       if (e.level === 1) {
-        if (e.message === '[太极Ai] 找到全局头部，继续监听容器加载...') {
+        // console.log(e.message)
+        if (e.message === '[太极Ai] 找到全局头部') {
           webview.removeEventListener('console-message', consoleMessage)
           routerContext.setHeaderColor(true)
         }
@@ -123,7 +129,8 @@ export default function Home() {
       webview.removeEventListener('did-navigate-in-page', navigateInPage)
       webview.removeEventListener('did-fail-load', fail_load)
       window.electron.ipcRenderer.removeAllListeners('close-notice')
-      window.electron.ipcRenderer.removeAllListeners('scroll-to-bottom')
+      window.electron.ipcRenderer.removeAllListeners('open-devtools')
+      // window.electron.ipcRenderer.removeAllListeners('scroll-to-bottom')
     }
   })
 

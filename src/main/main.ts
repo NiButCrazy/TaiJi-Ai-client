@@ -86,7 +86,7 @@ function createWindow(): void {
     show: false,
     frame: false,
     autoHideMenuBar: true,
-    backgroundColor: nativeTheme.shouldUseDarkColors ? '#1d273b' : '#F1F5F9',
+    backgroundColor: nativeTheme.shouldUseDarkColors ? '#18181c' : '#F1F5F9',
     // backgroundMaterial: 'auto',
     ...(process.platform === 'linux' ? {} : { icon }),
     webPreferences: {
@@ -104,7 +104,7 @@ function createWindow(): void {
   devtools_custom_font(mainWindow, 14)
 
   nativeTheme.on('updated', () => {
-    mainWindow.setBackgroundColor(nativeTheme.shouldUseDarkColors ? '#1d273b' : '#F1F5F9')
+    mainWindow.setBackgroundColor(nativeTheme.shouldUseDarkColors ? '#18181c' : '#F1F5F9')
   })
 
   let first_start = true
@@ -245,26 +245,27 @@ app.whenReady().then(() => {
         store.set('closeConfirm', local_config.closeConfirm)
       }
     },
-    {
-      label: '永不提示公告',
-      type: 'checkbox',
-      checked: local_config.closeNotice,
-      click: () => {
-        local_config.closeNotice = !local_config.closeNotice
-        store.set('closeNotice', local_config.closeNotice)
-        mainWindow.webContents.send('close-notice', local_config.closeNotice)
-      }
-    },
-    {
-      label: '自动滚至底部',
-      type: 'checkbox',
-      checked: local_config.scrollToBottom,
-      click: () => {
-        local_config.scrollToBottom = !local_config.scrollToBottom
-        store.set('scrollToBottom', local_config.scrollToBottom)
-        mainWindow.webContents.send('scroll-to-bottom', local_config.scrollToBottom)
-      }
-    },
+    // {
+    //   label: '永不提示公告',
+    //   type: 'checkbox',
+    //   checked: local_config.closeNotice,
+    //   click: () => {
+    //     local_config.closeNotice = !local_config.closeNotice
+    //     store.set('closeNotice', local_config.closeNotice)
+    //     mainWindow.webContents.send('close-notice', local_config.closeNotice)
+    //   }
+    // },
+
+    // {
+    //   label: '自动滚至底部',
+    //   type: 'checkbox',
+    //   checked: local_config.scrollToBottom,
+    //   click: () => {
+    //     local_config.scrollToBottom = !local_config.scrollToBottom
+    //     store.set('scrollToBottom', local_config.scrollToBottom)
+    //     mainWindow.webContents.send('scroll-to-bottom', local_config.scrollToBottom)
+    //   }
+    // },
     {
       label: '系统主题',
       submenu: [
@@ -319,6 +320,15 @@ app.whenReady().then(() => {
       ]
     }
   ]
+
+  if (is.dev) {
+    menuTemplate.push({
+      label: '开发者工具',
+      click: () => {
+        mainWindow.webContents.send('open-devtools')
+      }
+    },)
+  }
   const menu = Menu.buildFromTemplate(menuTemplate)
   ipcMain.on('menu', () => {
     menu.popup()
