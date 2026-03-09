@@ -1,3 +1,36 @@
+function _initChatFeatures(container, btn_container, input, scroll_btn) {
+  // 用事件委托监听点击事件（发送按钮）
+  btn_container.addEventListener('click', function (event) {
+    if (event.target.matches(
+      'button.n-button.n-button--primary-type.n-button--small-type.n-button--secondary'
+    )) {
+      // container.scrollTop = container.scrollHeight + 200
+      scroll_btn.click()
+    }
+  })
+  let isKeyDown = false
+
+  // 用事件委托监听键盘事件（输入框）
+  input.addEventListener('keyup', function (event) {
+    if (event.key === 'Enter') {
+      isKeyDown = false
+      const inputMode = JSON.parse(localStorage.getItem('userStore')).localSet.sendKey
+
+      if (event.shiftKey) {
+        if (inputMode === 's-enter') {
+          // container.scrollTop = container.scrollHeight + 200
+          scroll_btn.click()
+        }
+      } else {
+        if (inputMode === 'enter') {
+          // container.scrollTop = container.scrollHeight + 200
+          scroll_btn.click()
+        }
+      }
+    }
+  })
+}
+
 function _scroll_to_bottom() {
   if (!window._nbc_container) {return}
   const container = window._nbc_container
@@ -59,6 +92,9 @@ function waitForChatContainer() {
               window._nbc_container = container
               window._nbc_scroll_btn = scroll_btn
               _scroll_to_bottom()
+              const btn_container = document.body.querySelector('.chat-input-box .input-tools')
+              const input = document.body.querySelector('.chat-input-box textarea.n-input__textarea-el')
+              _initChatFeatures(container, btn_container, input, scroll_btn)
               // 找到容器后停止监听
               observer.disconnect()
               console.log('[太极Ai] 容器已加载，停止全局观察器')
