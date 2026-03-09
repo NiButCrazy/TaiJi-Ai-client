@@ -1,6 +1,12 @@
 ## :memo: 更新日志
 
-## [v0.7.0](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.7...v0.7.0) -  v0.6.7..
+## [v0.7.1](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.0...v0.7.1) -  v0.7.0..
+
+#### :sparkles: 新功能
+
+-  恢复了点击回车就滚动至底部的功能 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(621b18a)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/621b18a3e9cdd70bc81781115914b2dce8ee306d)
+
+## [v0.7.0](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.7...v0.7.0) -  2026/03/09 
 
 #### :sparkles: 新功能
 
