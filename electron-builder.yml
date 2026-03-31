@@ -4,6 +4,7 @@ directories:
   output: .out/dist         # 自定义输出目录（替代默认的 `dist`）
   buildResources: .out/build   # 自定义构建资源目录（替代默认的 `build`）, 指定所需的资源目录，例如图标、启动画面等
 files: # 指定需要包含在最终打包中的文件和文件夹，通常包括源代码、资源文件等
+  #  - 'node_modules/ms'
   - '!**/.vscode/*'
   - '!src/*'
   - '!electron.vite.config.{js,ts,mjs,cjs}'
