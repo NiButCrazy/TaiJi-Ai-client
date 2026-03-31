@@ -1,6 +1,12 @@
 ## :memo: 更新日志
 
-## [v0.7.5](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.4...v0.7.5) -  v0.7.4..
+## [v0.7.6](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.5...v0.7.6) -  v0.7.5..
+
+#### :hammer: CI / CD
+
+- ci: 工作流不知道有没有修复 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(b0fe168)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/b0fe168dea7c43313959e4a3496cce1fc99538ad)
+
+## [v0.7.5](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.4...v0.7.5) -  2026/03/31 
 
 #### :sparkles: 新功能
 
