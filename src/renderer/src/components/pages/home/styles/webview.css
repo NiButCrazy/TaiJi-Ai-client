@@ -124,10 +124,14 @@ body.theme-dark {
 }
 
 /*聊天输入框背景色*/
-.chat-input-box:has( .n-input--focus) {
+.chat-input-box {
   background-color: var(--nbc-bg-color) !important;
 }
 
+
+.chat-input-box.--collapsed {
+  opacity: 0.75;
+}
 
 ._to-bottom {
   right: 20px;
