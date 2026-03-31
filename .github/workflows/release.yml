@@ -43,7 +43,7 @@ jobs:
         id: changelog
         shell: pwsh
         run: |
-          nbc-auto-changelog --stdout --ending-version "${{ github.ref_name }}" --starting-version "${{ github.ref_name }}" | Out-File -FilePath changelog_new.md -Encoding utf8
+          nbc-auto-changelog --stdout --ending-version "${{ github.ref_name }}" --starting-version "${{ github.ref_name }}" | Out-File -FilePath ./changelog_new.md -Encoding utf8
 
       - name: Create Release
         id: create_release
@@ -54,8 +54,6 @@ jobs:
           tag_name: ${{ github.ref_name }}
           name: 太极AI ${{ github.ref_name }}
           body_path: ./changelog_new.md
-          draft: false
-          prerelease: false
           files: |
             ./.out/dist/*.exe
 
