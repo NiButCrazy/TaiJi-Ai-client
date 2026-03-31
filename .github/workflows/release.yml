@@ -53,7 +53,7 @@ jobs:
         with:
           tag_name: ${{ github.ref_name }}
           name: 太极AI ${{ github.ref_name }}
-          body_path: changelog_new.md
+          body_path: ./changelog_new.md
           draft: false
           prerelease: false
           files: |
