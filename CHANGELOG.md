@@ -1,12 +1,14 @@
 ## :memo: 更新日志
 
-## [v0.7.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.2...v0.7.3) -  v0.7.2..
+## [v0.7.4](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.3...v0.7.4) -  v0.7.3..
+
+#### :bug: 修复
+
+-  pnpm赤石了,找不到ms依赖 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(807d965)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/807d965fae00b7cb02894be6c0c1e4a2fa6e817b)
+
+## [v0.7.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.2...v0.7.3) -  2026/03/31 
 
 #### :hammer: CI / CD
-
-- ci: 工作流更新node &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(e1ccda6)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/e1ccda6a59bc47930235251f0dbe7add5a0c8429)
-
-#### :cyclone: 整体修改
 
 - ci: 工作流更新node &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(e1ccda6)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/e1ccda6a59bc47930235251f0dbe7add5a0c8429)
 
