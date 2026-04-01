@@ -1,52 +1,32 @@
 ## :memo: 更新日志
 
-## [v0.7.9](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.8...v0.7.9) -  v0.7.8..
-
-#### :hammer: CI / CD
-
-- ci: test &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(de91c5d)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/de91c5d357807b49b55ac952f2eb1809b91df972)
-
-## [v0.7.8](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.7...v0.7.8) -  2026/04/01 
-
-## [v0.7.7](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.6...v0.7.7) -  2026/04/01 
-
-#### :bug: 修复
-
--  工作流字符 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(280e0d3)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/280e0d36627e574bf0c2a80cac25313f41ad53b2)
-
-#### :hammer: CI / CD
-
-- ci: 工作流小修 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(e034a4e)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/e034a4e7d3f9811a1815995cf81717da185a5da5)
-
-## [v0.7.6](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.5...v0.7.6) -  2026/03/31 
-
-#### :hammer: CI / CD
-
-- ci: 工作流不知道有没有修复 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(b0fe168)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/b0fe168dea7c43313959e4a3496cce1fc99538ad)
-
-## [v0.7.5](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.4...v0.7.5) -  2026/03/31 
+## [v0.7.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.1...v0.7.2) -  v0.7.1..
 
 #### :sparkles: 新功能
 
 -  工作流 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(196b3e1)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/196b3e1e365cb32e9c56f2e9d7669d31276a28d6)
 
-## [v0.7.4](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.3...v0.7.4) -  2026/03/31 
-
 #### :bug: 修复
 
 -  pnpm赤石了,找不到ms依赖 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(807d965)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/807d965fae00b7cb02894be6c0c1e4a2fa6e817b)
 
-## [v0.7.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.2...v0.7.3) -  2026/03/31 
-
-#### :hammer: CI / CD
-
-- ci: 工作流更新node &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(e1ccda6)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/e1ccda6a59bc47930235251f0dbe7add5a0c8429)
-
-## [v0.7.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.1...v0.7.2) -  2026/03/31 
+-  工作流字符 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(280e0d3)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/280e0d36627e574bf0c2a80cac25313f41ad53b2)
 
 #### :books: 样式
 
 -  小修样式 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(b356ba2)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/b356ba2ca297fe87a3ca725c3bbd2ee473ec6410)
+
+#### :hammer: CI / CD
+
+- ci: 工作流小修 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(e034a4e)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/e034a4e7d3f9811a1815995cf81717da185a5da5)
+
+- ci:  修复 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(d75379d)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/d75379df5ba9a6ca79b943ea38767fe3a39045a4)
+
+- ci: test &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(de91c5d)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/de91c5d357807b49b55ac952f2eb1809b91df972)
+
+- ci: 工作流不知道有没有修复 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(b0fe168)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/b0fe168dea7c43313959e4a3496cce1fc99538ad)
+
+- ci: 工作流更新node &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(e1ccda6)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/e1ccda6a59bc47930235251f0dbe7add5a0c8429)
 
 ## [v0.7.1](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.0...v0.7.1) -  2026/03/09 
 
