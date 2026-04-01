@@ -14,25 +14,24 @@ jobs:
 
     steps:
 
-      - name: Checkout code
+      - name: 检出代码
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-
-      - name: Install dependencies
+      - name: 下载依赖库
         run: npm install
 
-      - name: Install nbc-auto-changelog
+      - name: 下载 nbc-auto-changelog
         run: npm install -g nbc-auto-changelog
 
-      - name: Get CHANGELOG.md
+      - name: 获取 CHANGELOG.md
         id: changelog
         shell: pwsh
         run: |
-          nbc-auto-changelog --stdout --ending-version "${{ github.ref_name }}" --starting-version "${{ github.ref_name }}" | Out-File -FilePath ./changelog_new.md -Encoding utf8
+          nbc-auto-changelog --stdout --ending-version "${{ github.ref_name }}" --starting-version "${{ github.ref_name }}" | Out-File -FilePath changelog_new.md -Encoding utf8
 
-      - name: Create Release
+      - name: 创建发布流
         id: create_release
         uses: softprops/action-gh-release@v2
         env:
@@ -40,9 +39,9 @@ jobs:
         with:
           tag_name: ${{ github.ref_name }}
           name: 太极AI ${{ github.ref_name }}
-          body_path: ./changelog_new.md
+          body_path: changelog_new.md
 
-      - name: Build Windows application
+      - name: 构建并上传应用
         run: npm run build:win
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
