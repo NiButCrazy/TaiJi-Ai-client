@@ -17,7 +17,7 @@ jobs:
         run: npm install -g pnpm
 
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@@v4
         with:
           fetch-depth: 0
 
@@ -43,7 +43,7 @@ jobs:
         id: changelog
         shell: pwsh
         run: |
-          nbc-auto-changelog --stdout --ending-version "${{ github.ref_name }}" --starting-version "${{ github.ref_name }}" | Out-File -FilePath ./changelog_new.md -Encoding utf8
+          nbc-auto-changelog --stdout --ending-version ${{ github.ref_name }} --starting-version ${{ github.ref_name }} | Out-File -FilePath ./changelog_new.txt -Encoding GBK
 
       - name: Create Release
         id: create_release
@@ -52,8 +52,9 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           tag_name: ${{ github.ref_name }}
-          name: 太极AI ${{ github.ref_name }}
-          body_path: ./changelog_new.md
+          name: "太极AI ${{ github.ref_name }} maybe"
+          body: "回退"
+          body_path: ./changelog_new.txt
           files: |
             ./.out/dist/*.exe
 
