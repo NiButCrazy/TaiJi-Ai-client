@@ -1,6 +1,12 @@
 ## :memo: 更新日志
 
-## [v0.7.8](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.7...v0.7.8) -  v0.7.7..
+## [v0.7.9](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.8...v0.7.9) -  v0.7.8..
+
+#### :hammer: CI / CD
+
+- ci: test &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(de91c5d)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/de91c5d357807b49b55ac952f2eb1809b91df972)
+
+## [v0.7.8](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.7...v0.7.8) -  2026/04/01 
 
 ## [v0.7.7](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.6...v0.7.7) -  2026/04/01 
 
