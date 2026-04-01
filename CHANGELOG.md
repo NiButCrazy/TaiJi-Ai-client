@@ -1,6 +1,12 @@
 ## :memo: 更新日志
 
-## [v0.7.4](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.3...v0.7.4) -  v0.7.3..
+## [v0.7.5](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.4...v0.7.5) -  v0.7.4..
+
+#### :hammer: CI / CD
+
+- ci: 小修描述 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(c1b6277)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/c1b6277e9106ce44a1e5b15b85f5374d123d3676)
+
+## [v0.7.4](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.3...v0.7.4) -  2026/04/01 
 
 #### :books: 样式
 
