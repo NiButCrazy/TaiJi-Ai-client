@@ -1,6 +1,12 @@
 ## :memo: 更新日志
 
-## [v0.7.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.1...v0.7.3) -  v0.7.1..
+## [v0.7.4](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.3...v0.7.4) -  v0.7.3..
+
+#### :books: 样式
+
+-  小修 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(63f8256)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/63f82565f8b9c52d1df3e5eec9da020ccfd25484)
+
+## [v0.7.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.1...v0.7.3) -  2026/04/01 
 
 #### :sparkles: 新功能
 
