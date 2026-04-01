@@ -26,7 +26,7 @@ jobs:
       - name: Install nbc-auto-changelog
         run: npm install -g nbc-auto-changelog
 
-      - name: Get CHANGELOG.md content
+      - name: Get CHANGELOG.md
         id: changelog
         shell: pwsh
         run: |
