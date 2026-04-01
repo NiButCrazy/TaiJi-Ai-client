@@ -13,26 +13,17 @@ jobs:
     runs-on: windows-latest
 
     steps:
-      - name: Install pnpm
-        run: npm install -g pnpm
 
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: '24'
-          cache: 'pnpm'
-
-
       - name: Install dependencies
-        run: pnpm install
+        run: npm install
 
       - name: Build Windows application
-        run: pnpm build:win
+        run: npm build:win
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -43,7 +34,7 @@ jobs:
         id: changelog
         shell: pwsh
         run: |
-          nbc-auto-changelog --stdout --ending-version ${{ github.ref_name }} --starting-version ${{ github.ref_name }} | Out-File -FilePath ./changelog_new.txt -Encoding GBK
+          nbc-auto-changelog --stdout --ending-version ${{ github.ref_name }} --starting-version ${{ github.ref_name }} | Out-File -FilePath ./changelog_new.txt -Encoding UTF8
 
       - name: Create Release
         id: create_release
