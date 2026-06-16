@@ -1,403 +1,377 @@
-## [0.7.5](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.4..v0.7.5) - 2026-04-01
+## :memo: 更新日志
 
-### Hammer: CI / CD
+## [v0.7.6](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.5...v0.7.6) -  v0.7.5..
 
-- 小修描述 - ([c1b6277](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/c1b6277e9106ce44a1e5b15b85f5374d123d3676))
+#### :bug: 修复
 
+-  修缮了重新加载页面的逻辑 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(33e1f6d)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/33e1f6da69302bc48b1ab093970e289216f0594a)
 
-## [0.7.4](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.3..v0.7.4) - 2026-04-01
+## [v0.7.5](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.4...v0.7.5) -  2026/04/01 
 
-### :art: 样式
+#### :hammer: CI / CD
 
-- 小修 - ([63f8256](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/63f82565f8b9c52d1df3e5eec9da020ccfd25484))
+- ci: 小修描述 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(c1b6277)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/c1b6277e9106ce44a1e5b15b85f5374d123d3676)
 
+## [v0.7.4](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.3...v0.7.4) -  2026/04/01 
 
-## [0.7.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.1..v0.7.3) - 2026-04-01
+#### :books: 样式
 
-### :sparkles: 新功能
+-  小修 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(63f8256)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/63f82565f8b9c52d1df3e5eec9da020ccfd25484)
 
-- 工作流 - ([196b3e1](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/196b3e1e365cb32e9c56f2e9d7669d31276a28d6))
+## [v0.7.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.1...v0.7.3) -  2026/04/01 
 
-### :bug: 修复
+#### :sparkles: 新功能
 
-- 工作流字符 - ([280e0d3](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/280e0d36627e574bf0c2a80cac25313f41ad53b2))
-- Pnpm赤石了,找不到ms依赖 - ([807d965](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/807d965fae00b7cb02894be6c0c1e4a2fa6e817b))
+-  工作流 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(196b3e1)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/196b3e1e365cb32e9c56f2e9d7669d31276a28d6)
 
-### :art: 样式
+#### :bug: 修复
 
-- 小修样式 - ([b356ba2](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/b356ba2ca297fe87a3ca725c3bbd2ee473ec6410))
+-  pnpm赤石了,找不到ms依赖 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(807d965)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/807d965fae00b7cb02894be6c0c1e4a2fa6e817b)
 
-### Hammer: CI / CD
+-  工作流字符 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(280e0d3)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/280e0d36627e574bf0c2a80cac25313f41ad53b2)
 
-- 修复一堆问题 - ([cb34550](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/cb345501f7fa4398104ce5b6bb5b180b49d84c38))
-- 修复 - ([d75379d](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/d75379df5ba9a6ca79b943ea38767fe3a39045a4))
-- Test - ([de91c5d](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/de91c5d357807b49b55ac952f2eb1809b91df972))
-- 工作流小修 - ([e034a4e](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/e034a4e7d3f9811a1815995cf81717da185a5da5))
-- 工作流不知道有没有修复 - ([b0fe168](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/b0fe168dea7c43313959e4a3496cce1fc99538ad))
-- 工作流更新node - ([e1ccda6](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/e1ccda6a59bc47930235251f0dbe7add5a0c8429))
+#### :books: 样式
 
+-  小修样式 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(b356ba2)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/b356ba2ca297fe87a3ca725c3bbd2ee473ec6410)
 
-## [0.7.1](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.0..v0.7.1) - 2026-03-09
+#### :hammer: CI / CD
 
-### :sparkles: 新功能
+- ci: 工作流小修 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(e034a4e)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/e034a4e7d3f9811a1815995cf81717da185a5da5)
 
-- 恢复了点击回车就滚动至底部的功能 - ([621b18a](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/621b18a3e9cdd70bc81781115914b2dce8ee306d))
+- ci: 修复一堆问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(cb34550)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/cb345501f7fa4398104ce5b6bb5b180b49d84c38)
 
+- ci:  修复 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(d75379d)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/d75379df5ba9a6ca79b943ea38767fe3a39045a4)
 
-## [0.7.0](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.7..v0.7.0) - 2026-03-09
+- ci: test &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(de91c5d)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/de91c5d357807b49b55ac952f2eb1809b91df972)
 
-### :sparkles: 新功能
+- ci: 工作流不知道有没有修复 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(b0fe168)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/b0fe168dea7c43313959e4a3496cce1fc99538ad)
 
-- 适配新版本的太极AI - ([9ecf706](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/9ecf706bfc957aa2da2dfe6cddda292970a63c17))
+- ci: 工作流更新node &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(e1ccda6)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/e1ccda6a59bc47930235251f0dbe7add5a0c8429)
 
+## [v0.7.1](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.7.0...v0.7.1) -  2026/03/09 
 
-## [0.6.7](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.6..v0.6.7) - 2026-01-01
+#### :sparkles: 新功能
 
-### :sparkles: 新功能
+-  恢复了点击回车就滚动至底部的功能 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(621b18a)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/621b18a3e9cdd70bc81781115914b2dce8ee306d)
 
-- 删除了几个无用的菜单栏 - ([b4d66b5](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/b4d66b54561d08cdc8d33bcb36cf5fb9346428a8))
+## [v0.7.0](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.7...v0.7.0) -  2026/03/09 
 
+#### :sparkles: 新功能
 
-## [0.6.6](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.5..v0.6.6) - 2025-12-30
+-  适配新版本的太极AI &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(9ecf706)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/9ecf706bfc957aa2da2dfe6cddda292970a63c17)
 
-### :bug: 修复
+## [v0.6.7](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.6...v0.6.7) -  2026/01/01 
 
-- 新域名更新 - ([4ce280a](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/4ce280a69be13f43bce656b284d62fc665126158))
+#### :sparkles: 新功能
 
+-  删除了几个无用的菜单栏 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(b4d66b5)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/b4d66b54561d08cdc8d33bcb36cf5fb9346428a8)
 
-## [0.6.5](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.4..v0.6.5) - 2025-12-25
+## [v0.6.6](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.5...v0.6.6) -  2025/12/30 
 
-### :sparkles: 新功能
+#### :bug: 修复
 
-- 添加网页刷新 - ([2f983d9](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/2f983d9056d1df567fcd7f0b4ef8f0c5407b3362))
+-  新域名更新 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(4ce280a)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/4ce280a69be13f43bce656b284d62fc665126158)
 
+## [v0.6.5](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.4...v0.6.5) -  2025/12/25 
 
-## [0.6.4](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.3..v0.6.4) - 2025-12-18
+#### :sparkles: 新功能
 
-### :bug: 修复
+-  添加网页刷新 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(2f983d9)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/2f983d9056d1df567fcd7f0b4ef8f0c5407b3362)
 
-- 修复了部分网页重载问题 - ([0c36b23](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/0c36b23f36baf442e10c282af33301d1324cbef0))
+## [v0.6.4](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.3...v0.6.4) -  2025/12/18 
 
+#### :bug: 修复
 
-## [0.6.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.2..v0.6.3) - 2025-12-13
+-  修复了部分网页重载问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(0c36b23)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/0c36b23f36baf442e10c282af33301d1324cbef0)
 
-### :bug: 修复
+## [v0.6.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.2...v0.6.3) -  2025/12/13 
 
-- 添加了404页面刷新功能 - ([1df10d7](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/1df10d7bebc8895ed6e0627f1b367e55537f76b2))
+#### :bug: 修复
 
+-  添加了404页面刷新功能 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(1df10d7)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/1df10d7bebc8895ed6e0627f1b367e55537f76b2)
 
-## [0.6.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.1..v0.6.2) - 2025-12-05
+## [v0.6.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.1...v0.6.2) -  2025/12/05 
 
-### :bug: 修复
+#### :bug: 修复
 
-- 修复了路径问题 - ([f5a2d9b](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/f5a2d9bdb584aabf050e27dcef9cd080716dac17))
+-  修复了路径问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(f5a2d9b)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/f5a2d9bdb584aabf050e27dcef9cd080716dac17)
 
+## [v0.6.1](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.0...v0.6.1) -  2025/12/04 
 
-## [0.6.1](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.6.0..v0.6.1) - 2025-12-04
+#### :bug: 修复
 
-### :bug: 修复
+-  修复了样式问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(4ab7fba)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/4ab7fbaf0eb2536392998316f5b7d050c2b072d2)
 
-- 修复了样式问题 - ([4ab7fba](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/4ab7fbaf0eb2536392998316f5b7d050c2b072d2))
+## [v0.6.0](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.5.5...v0.6.0) -  2025/12/04 
 
+#### :bug: 修复
 
-## [0.6.0](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.5.5..v0.6.0) - 2025-12-04
+-  修复了旧域名无效的问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(503c0c9)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/503c0c99c4af944f294e2e88ebc62448a561d657)
 
-### :bug: 修复
+-  我是傻逼 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(5c7852c)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/5c7852ce423da31fb9a707329c9de29eeeb2056b)
 
-- 修复了旧域名无效的问题 - ([503c0c9](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/503c0c99c4af944f294e2e88ebc62448a561d657))
-- 我是傻逼 - ([5c7852c](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/5c7852ce423da31fb9a707329c9de29eeeb2056b))
-- 工作流小修复 - ([5997e46](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/5997e463a597934534cc2968157f164c5b4193d4))
+-  工作流小修复 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(5997e46)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/5997e463a597934534cc2968157f164c5b4193d4)
 
+## [v0.5.5](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.5.4...v0.5.5) -  2025/11/01 
 
-## [0.5.5](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.5.4..v0.5.5) - 2025-11-01
+#### :bug: 修复
 
-### :bug: 修复
+-  为开发模式单独设置ID,防止和生产版实例冲突 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(7011f30)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/7011f302d32afdf6ec8651bb64e90d5adf94ea5a)
 
-- 为开发模式单独设置ID,防止和生产版实例冲突 - ([7011f30](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/7011f302d32afdf6ec8651bb64e90d5adf94ea5a))
+## [v0.5.4](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.5.3...v0.5.4) -  2025/10/28 
 
+#### :sparkles: 新功能
 
-## [0.5.4](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.5.3..v0.5.4) - 2025-10-28
+-  添加重启软件的确认框 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(f48328c)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/f48328ce1e57dc4d3b52a2c8ace5409e04ba31ef)
 
-### :sparkles: 新功能
+## [v0.5.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.5.2...v0.5.3) -  2025/10/28 
 
-- 添加重启软件的确认框 - ([f48328c](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/f48328ce1e57dc4d3b52a2c8ace5409e04ba31ef))
+#### :book: 文档
 
+-  更新了自述文件 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(39093b9)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/39093b991db6c7ecae8fecaf314dcc3b38815550)
 
-## [0.5.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.5.2..v0.5.3) - 2025-10-28
+#### :wrench: 依赖 | 构建
 
-### Book: 文档
+-  更新依赖 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(09deb54)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/09deb54f7717f26bb6e2da43a35315be94a07473)
 
-- 更新了自述文件 - ([39093b9](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/39093b991db6c7ecae8fecaf314dcc3b38815550))
+## [v0.5.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.5.1...v0.5.2) -  2025/10/16 
 
-### :wrench: 依赖 | 构建
+#### :bug: 修复
 
-- 更新依赖 - ([09deb54](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/09deb54f7717f26bb6e2da43a35315be94a07473))
+-  修复了切换页面后JS无法加载的问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(d49a290)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/d49a290f839690f8f7a55ed78b11f943cbffe902)
+	-  代价是性能开销稍增长了一丝
 
+## [v0.5.1](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.5.0...v0.5.1) -  2025/10/15 
 
-## [0.5.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.5.1..v0.5.2) - 2025-10-16
+#### :package: 杂项
 
-### :bug: 修复
+-  忘记把react-devtools添加进来了 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(3aada8d)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/3aada8da34e948a900740fa5e6fad24bd76568fe)
 
-- 修复了切换页面后JS无法加载的问题 - ([d49a290](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/d49a290f839690f8f7a55ed78b11f943cbffe902))
+#### :book: 文档
 
+-  更新了自述文件 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(0d88571)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/0d8857193e02b5b7b66a5c85e5ca005ef13c5f92)
+	-  顺便添加了搜索快捷键
 
-## [0.5.1](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.5.0..v0.5.1) - 2025-10-15
+#### :books: 样式
 
-### Book: 文档
+-  去除了冗余滚动条 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(e10115b)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/e10115b11e7cff3519a2d139716602dc88b4f759)
+	-  顺便启动时的把左上角的按钮给隐藏了
 
-- 更新了自述文件 - ([0d88571](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/0d8857193e02b5b7b66a5c85e5ca005ef13c5f92))
+## [v0.5.0](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.4.5...v0.5.0) -  2025/10/15 
 
-### :art: 样式
+#### :sparkles: 新功能
 
-- 去除了冗余滚动条 - ([e10115b](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/e10115b11e7cff3519a2d139716602dc88b4f759))
+-  添加了页内搜索功能和永久关闭公告的功能 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(7ee3a43)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/7ee3a4315aa0791d69a5e6c8a16ac21b684f27b3)
+	-  优化了enter/shift+enter的发送判断逻辑
 
-### :package: 杂项
+-  添加主题切换深色模式功能 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(3dbc539)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/3dbc539fbc8938e8fdab0de8047ef6b583cb2c8b)
 
-- 忘记把react-devtools添加进来了 - ([3aada8d](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/3aada8da34e948a900740fa5e6fad24bd76568fe))
+#### :bug: 修复
 
+-  修复了开发者工具扩展的加载问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(3f89916)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/3f89916887cc62811d8555445e7141d7d9696bee)
 
-## [0.5.0](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.4.5..v0.5.0) - 2025-10-15
+-  修复了webview的事件监听没有取消订阅的BUG &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(f9bfd83)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/f9bfd83b06a7837b7ddc085c09a9e3dbd03af8bd)
 
-### :sparkles: 新功能
+-  UI图片设置为禁止拖拽 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(42e532f)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/42e532f9cf676a8a8275fcc62cb40a8f60995d3d)
 
-- 添加主题切换深色模式功能 - ([3dbc539](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/3dbc539fbc8938e8fdab0de8047ef6b583cb2c8b))
-- 添加了页内搜索功能和永久关闭公告的功能 - ([7ee3a43](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/7ee3a4315aa0791d69a5e6c8a16ac21b684f27b3))
+#### :package: 杂项
 
-### :bug: 修复
+-  重命名idea项目名 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(58361ad)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/58361ad90f5666672984bf732517a48e5ec73167)
 
-- 修复了开发者工具扩展的加载问题 - ([3f89916](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/3f89916887cc62811d8555445e7141d7d9696bee))
-- 修复了webview的事件监听没有取消订阅的BUG - ([f9bfd83](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/f9bfd83b06a7837b7ddc085c09a9e3dbd03af8bd))
-- UI图片设置为禁止拖拽 - ([42e532f](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/42e532f9cf676a8a8275fcc62cb40a8f60995d3d))
+-  删了一些冗余组件 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(888ee70)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/888ee709cfaf467f026b6fbb595796a4039e48b4)
 
-### :art: 样式
+#### :books: 样式
 
-- 优化了导航菜单栏,使其跟随webview的背景颜色变化而变化 - ([e81127b](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/e81127bbc6cc2102788a11eb4770ad9bedacc1db))
+-  优化了导航菜单栏,使其跟随webview的背景颜色变化而变化 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(e81127b)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/e81127bbc6cc2102788a11eb4770ad9bedacc1db)
 
-### :package: 杂项
+## [v0.4.5](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.4.4...v0.4.5) -  2025/10/12 
 
-- 删了一些冗余组件 - ([888ee70](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/888ee709cfaf467f026b6fbb595796a4039e48b4))
-- 重命名idea项目名 - ([58361ad](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/58361ad90f5666672984bf732517a48e5ec73167))
+#### :sparkles: 新功能
 
+-  添加自动更新功能开关 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(84086d5)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/84086d5ffb12cb4eabed153fd4931d9d24f57a0d)
 
-## [0.4.5](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.4.4..v0.4.5) - 2025-10-12
+## [v0.4.4](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.4.3...v0.4.4) -  2025/10/11 
 
-### :sparkles: 新功能
+#### :wrench: 依赖 | 构建
 
-- 添加自动更新功能开关 - ([84086d5](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/84086d5ffb12cb4eabed153fd4931d9d24f57a0d))
+-  更新了应用id &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(468e0bc)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/468e0bc3c6af51ca9450f0b4695dd3250892c6c0)
 
+## [v0.4.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.4.2...v0.4.3) -  2025/10/11 
 
-## [0.4.4](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.4.3..v0.4.4) - 2025-10-11
+#### :bug: 修复
 
-### :wrench: 依赖 | 构建
+-  修复了更新通知重复的问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(f6efb05)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/f6efb05bfe8d8918cd4566fe67fadbff73a55edc)
 
-- 更新了应用id - ([468e0bc](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/468e0bc3c6af51ca9450f0b4695dd3250892c6c0))
+## [v0.4.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.4.1...v0.4.2) -  2025/10/11 
 
+#### :sparkles: 新功能
 
-## [0.4.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.4.2..v0.4.3) - 2025-10-11
+-  自动更新通知功能 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(7017bc2)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/7017bc295772b8301d2ffe32c7bb43defb8b60c6)
 
-### :bug: 修复
+## [v0.4.1](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.4.0...v0.4.1) -  2025/10/11 
 
-- 修复了更新通知重复的问题 - ([f6efb05](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/f6efb05bfe8d8918cd4566fe67fadbff73a55edc))
+#### :bug: 修复
 
+-  更改更新器来适配nsis更新 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(56d8ec9)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/56d8ec90f75299aeaa8e438f8143b7e6c51f539e)
 
-## [0.4.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.4.1..v0.4.2) - 2025-10-11
+## [v0.4.0](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.3.2...v0.4.0) -  2025/10/11 
 
-### :sparkles: 新功能
+#### :sparkles: 新功能
 
-- 自动更新通知功能 - ([7017bc2](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/7017bc295772b8301d2ffe32c7bb43defb8b60c6))
+-  添加了日志系统 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(e5094e4)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/e5094e4bca2017c090e1015c18975336387d3746)
 
+## [v0.3.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.3.1...v0.3.2) -  2025/10/11 
 
-## [0.4.1](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.4.0..v0.4.1) - 2025-10-11
+#### :wrench: 依赖 | 构建
 
-### :bug: 修复
+-  更新日志的细节修改 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(9583dc8)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/9583dc88c439452ff20db0a0f658f667098dba0f)
 
-- 更改更新器来适配nsis更新 - ([56d8ec9](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/56d8ec90f75299aeaa8e438f8143b7e6c51f539e))
+## [v0.3.1](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.3.0...v0.3.1) -  2025/10/11 
 
+#### :bug: 修复
 
-## [0.4.0](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.3.2..v0.4.0) - 2025-10-11
+-  修复依赖不一致的问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(494fde5)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/494fde559e6ca5909ed72724df91e0ca8e0acd0a)
 
-### :sparkles: 新功能
+## [v0.3.0](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.2.0...v0.3.0) -  2025/10/11 
 
-- 添加了日志系统 - ([e5094e4](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/e5094e4bca2017c090e1015c18975336387d3746))
+#### :sparkles: 新功能
 
+-  添加了自动更新功能 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(92e10dc)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/92e10dc3b2590a1aa717880083980377709fa11c)
 
-## [0.3.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.3.1..v0.3.2) - 2025-10-11
+## [v0.2.0](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.1.6...v0.2.0) -  2025/10/11 
 
-### :wrench: 依赖 | 构建
+#### :sparkles: 新功能
 
-- 更新日志的细节修改 - ([9583dc8](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/9583dc88c439452ff20db0a0f658f667098dba0f))
+-  实例隔离,用户数据与开发环境隔离 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(76df7b6)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/76df7b662f321eeaeb744effa549360dc349dfaf)
 
+## [v0.1.6](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.1.5...v0.1.6) -  2025/10/11 
 
-## [0.3.1](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.3.0..v0.3.1) - 2025-10-11
+#### :sparkles: 新功能
 
-### :bug: 修复
+-  优化构建流程 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(8908539)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/89085390377ff4344cc999b83868bf9effb32780)
 
-- 修复依赖不一致的问题 - ([494fde5](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/494fde559e6ca5909ed72724df91e0ca8e0acd0a))
+## [v0.1.5](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.1.4...v0.1.5) -  2025/10/11 
 
+#### :bug: 修复
 
-## [0.3.0](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.2.0..v0.3.0) - 2025-10-11
+-  修改了构建流程 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(0f7a48a)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/0f7a48ab33ae7284703cc91f023f62390e6ddd86)
 
-### :sparkles: 新功能
+## [v0.1.4](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.1.3...v0.1.4) -  2025/10/11 
 
-- 添加了自动更新功能 - ([92e10dc](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/92e10dc3b2590a1aa717880083980377709fa11c))
+#### :bug: 修复
 
+-  字符串问题反复修 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(76c1a69)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/76c1a690851f502ee80c8c1158144a6c97dd9e7f)
 
-## [0.2.0](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.1.6..v0.2.0) - 2025-10-11
+## [v0.1.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.1.2...v0.1.3) -  2025/10/11 
 
-### :sparkles: 新功能
+#### :bug: 修复
 
-- 实例隔离,用户数据与开发环境隔离 - ([76df7b6](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/76df7b662f321eeaeb744effa549360dc349dfaf))
+-  修复了仓库地址问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(aacc5f3)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/aacc5f3ae816ef75a2a0721f309a8170231550a8)
 
+## [v0.1.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.1.1...v0.1.2) -  2025/10/11 
 
-## [0.1.6](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.1.5..v0.1.6) - 2025-10-11
+#### :bug: 修复
 
-### :sparkles: 新功能
+-  修复字符格式问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(65f0231)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/65f0231109b0349cf1fcdf225bb7f830b29d236c)
 
-- 优化构建流程 - ([8908539](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/89085390377ff4344cc999b83868bf9effb32780))
+## [v0.1.1](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.1.0...v0.1.1) -  2025/10/11 
 
+#### :bug: 修复
 
-## [0.1.5](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.1.4..v0.1.5) - 2025-10-11
+-  修复路径问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(bd57cc1)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/bd57cc17a9f50344224bc96a2952100185914d77)
 
-### :bug: 修复
+## [v0.1.0](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.14...v0.1.0) -  2025/10/11 
 
-- 修改了构建流程 - ([0f7a48a](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/0f7a48ab33ae7284703cc91f023f62390e6ddd86))
+#### :bug: 修复
 
+-  修复了发布包路径错误的问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(9e766d8)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/9e766d80954bf6d4aa784df2f263f2acdff88e7f)
 
-## [0.1.4](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.1.3..v0.1.4) - 2025-10-11
+## [v0.0.14](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.13...v0.0.14) -  2025/10/11 
 
-### :bug: 修复
+#### :bug: 修复
 
-- 字符串问题反复修 - ([76c1a69](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/76c1a690851f502ee80c8c1158144a6c97dd9e7f))
+-  修复了日志问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(070df24)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/070df2433140f01aa76e26ac88efe7521dab8f0e)
 
+## [v0.0.13](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.12...v0.0.13) -  2025/10/11 
 
-## [0.1.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.1.2..v0.1.3) - 2025-10-11
+#### :bug: 修复
 
-### :bug: 修复
+-  修复了安装包名称 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(0b538f0)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/0b538f04a7192a3cc015a782223c8066c6e74155)
 
-- 修复了仓库地址问题 - ([aacc5f3](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/aacc5f3ae816ef75a2a0721f309a8170231550a8))
+## [v0.0.12](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.11...v0.0.12) -  2025/10/11 
 
+#### :bug: 修复
 
-## [0.1.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.1.1..v0.1.2) - 2025-10-11
+-  不小心排除了图标 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(38e48d3)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/38e48d321d8ad754ac1c6ba71a76076a7e3e5e44)
 
-### :bug: 修复
+## [v0.0.11](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.10...v0.0.11) -  2025/10/11 
 
-- 修复字符格式问题 - ([65f0231](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/65f0231109b0349cf1fcdf225bb7f830b29d236c))
+#### :bug: 修复
 
+-  添加了权限 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(1875847)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/1875847d51d2bfb8413a39fc64f4bbfca9cc7623)
 
-## [0.1.1](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.1.0..v0.1.1) - 2025-10-11
+## [v0.0.10](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.9...v0.0.10) -  2025/10/11 
 
-### :bug: 修复
+#### :bug: 修复
 
-- 修复路径问题 - ([bd57cc1](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/bd57cc17a9f50344224bc96a2952100185914d77))
+-  修复了工作流日志安装路径问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(380ee19)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/380ee19b1a1f2a39136adb29552cbd44570cf0b7)
 
+## [v0.0.9](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.8...v0.0.9) -  2025/10/11 
 
-## [0.1.0](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.14..v0.1.0) - 2025-10-11
+#### :bug: 修复
 
-### :bug: 修复
+-  修复了工作流日志安装问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(77b9149)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/77b9149792464e8b3eca4f611e0dfa18590a50e1)
 
-- 修复了发布包路径错误的问题 - ([9e766d8](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/9e766d80954bf6d4aa784df2f263f2acdff88e7f))
+## [v0.0.8](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.7...v0.0.8) -  2025/10/11 
 
+#### :bug: 修复
 
-## [0.0.14](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.13..v0.0.14) - 2025-10-11
+-  修复了工作流日志识别 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(758895b)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/758895b95902d52525f5c51097a06e36c47ca3d5)
 
-### :bug: 修复
+## [v0.0.7](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.6...v0.0.7) -  2025/10/11 
 
-- 修复了日志问题 - ([070df24](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/070df2433140f01aa76e26ac88efe7521dab8f0e))
+#### :wrench: 依赖 | 构建
 
+-  修复了工作流终端 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(0030852)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/00308521318cef62d3aafbdb39f3d6ccc2102da4)
 
-## [0.0.13](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.12..v0.0.13) - 2025-10-11
+## [v0.0.6](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.5...v0.0.6) -  2025/10/11 
 
-### :bug: 修复
+#### :wrench: 依赖 | 构建
 
-- 修复了安装包名称 - ([0b538f0](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/0b538f04a7192a3cc015a782223c8066c6e74155))
+-  修复了工作流更新日志的问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(eedfc29)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/eedfc29daf711b3b0545f887d71dc7649e9a204f)
 
+## [v0.0.5](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.4...v0.0.5) -  2025/10/10 
 
-## [0.0.12](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.11..v0.0.12) - 2025-10-11
+#### :book: 文档
 
-### :bug: 修复
+-  忽略文件修改 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(b791475)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/b7914750afac5a9e572994e80b44eace9de4fc3c)
 
-- 不小心排除了图标 - ([38e48d3](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/38e48d321d8ad754ac1c6ba71a76076a7e3e5e44))
+## [v0.0.4](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.3...v0.0.4) -  2025/10/10 
 
+#### :bug: 修复
 
-## [0.0.11](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.10..v0.0.11) - 2025-10-11
+-  修复了工作流pnpm安装问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(b5db587)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/b5db5878dedce1515b07ad5365871e8bd40b0f5b)
 
-### :bug: 修复
+## [v0.0.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.2...v0.0.3) -  2025/10/10 
 
-- 添加了权限 - ([1875847](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/1875847d51d2bfb8413a39fc64f4bbfca9cc7623))
+#### :bug: 修复
 
+-  修复了工作流pnpm的问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(bace2ea)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/bace2ea704768ed65ebd80695e9581bfcc2c2371)
 
-## [0.0.10](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.9..v0.0.10) - 2025-10-11
+## [v0.0.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.1...v0.0.2) -  2025/10/10 
 
-### :bug: 修复
+#### :package: 杂项
 
-- 修复了工作流日志安装路径问题 - ([380ee19](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/380ee19b1a1f2a39136adb29552cbd44570cf0b7))
+-  工作流修改 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(4b68991)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/4b689915aada6fda1a13336fbcf06bd50a85c212)
 
+## v0.0.1
 
-## [0.0.9](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.8..v0.0.9) - 2025-10-11
+#### :package: 杂项
 
-### :bug: 修复
+-  工作流修改 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(5808c5e)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/5808c5e524e7d726410c0c064ea4e24bd16cd2ba)
 
-- 修复了工作流日志安装问题 - ([77b9149](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/77b9149792464e8b3eca4f611e0dfa18590a50e1))
+-  工作流和自述文件修改 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(0876635)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/0876635d88a050fd759b6eacdd5463cf2508d844)
 
+#### :cyclone: 整体修改
 
-## [0.0.8](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.7..v0.0.8) - 2025-10-11
-
-### :bug: 修复
-
-- 修复了工作流日志识别 - ([758895b](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/758895b95902d52525f5c51097a06e36c47ca3d5))
-
-
-## [0.0.7](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.6..v0.0.7) - 2025-10-11
-
-### :wrench: 依赖 | 构建
-
-- 修复了工作流终端 - ([0030852](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/00308521318cef62d3aafbdb39f3d6ccc2102da4))
-
-
-## [0.0.6](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.5..v0.0.6) - 2025-10-11
-
-### :wrench: 依赖 | 构建
-
-- 修复了工作流更新日志的问题 - ([eedfc29](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/eedfc29daf711b3b0545f887d71dc7649e9a204f))
-
-
-## [0.0.5](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.4..v0.0.5) - 2025-10-10
-
-### Book: 文档
-
-- 忽略文件修改 - ([b791475](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/b7914750afac5a9e572994e80b44eace9de4fc3c))
-
-
-## [0.0.4](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.3..v0.0.4) - 2025-10-10
-
-### :bug: 修复
-
-- 修复了工作流pnpm安装问题 - ([b5db587](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/b5db5878dedce1515b07ad5365871e8bd40b0f5b))
-
-
-## [0.0.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.2..v0.0.3) - 2025-10-10
-
-### :bug: 修复
-
-- 修复了工作流pnpm的问题 - ([bace2ea](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/bace2ea704768ed65ebd80695e9581bfcc2c2371))
-
-
-## [0.0.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.0.1..v0.0.2) - 2025-10-10
-
-### :package: 杂项
-
-- 工作流修改 - ([4b68991](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/4b689915aada6fda1a13336fbcf06bd50a85c212))
-
-
-## [0.0.1] - 2025-10-10
-
-### :package: 杂项
-
-- 工作流修改 - ([5808c5e](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/5808c5e524e7d726410c0c064ea4e24bd16cd2ba))
-- 工作流和自述文件修改 - ([0876635](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/0876635d88a050fd759b6eacdd5463cf2508d844))
-
-## New Contributors ❤️
-
-* @NiButCrazy made their first contribution
-
-<!-- generated by git-cliff -->
+- Initial commit &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(cca3482)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/cca34823d5377d9d9b54d4e397d3ffaccb387187)
