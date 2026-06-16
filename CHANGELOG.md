@@ -1,6 +1,12 @@
 ## :memo: 更新日志
 
-## [v0.8.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.8.1...v0.8.2) -  v0.8.1..
+## [v0.8.3](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.8.2...v0.8.3) -  v0.8.2..
+
+#### :sparkles: 新功能
+
+-  添加了刷新缓存的功能 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(6ab7ad7)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/6ab7ad7e075a08395238911a664206c6cbe0691f)
+
+## [v0.8.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.8.1...v0.8.2) -  2026/06/16 
 
 #### :hammer: CI / CD
 
