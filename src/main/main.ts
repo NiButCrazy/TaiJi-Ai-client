@@ -1,5 +1,5 @@
 import { store, local_config } from './config.ts';
-import { app, shell, BrowserWindow, ipcMain, nativeTheme, Menu, dialog, Tray, Notification } from 'electron';
+import { session, app, shell, BrowserWindow, ipcMain, nativeTheme, Menu, dialog, Tray, Notification } from 'electron';
 import { electronApp, optimizer, is } from '@electron-toolkit/utils';
 import { devtools_custom_font, load_extensions } from './devtools';
 import electronUpdater, { type AppUpdater } from 'electron-updater';
@@ -243,6 +243,14 @@ app.whenReady().then(() => {
       click: () => {
         local_config.closeConfirm = !local_config.closeConfirm;
         store.set('closeConfirm', local_config.closeConfirm);
+      }
+    },
+    {
+      label: '刷新缓存',
+      type: 'normal',
+      click: () => {
+        session.defaultSession.clearCache();
+        mainWindow.webContents.reload();
       }
     },
     // {

@@ -1,11 +1,10 @@
-import { defineConfig, externalizeDepsPlugin } from 'electron-vite'
-import { resolve } from 'path'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from 'electron-vite';
+import { resolve } from 'path';
+import react from '@vitejs/plugin-react';
 
 // noinspection JSUnusedGlobalSymbols
 export default defineConfig({
   main: {
-    plugins: [ externalizeDepsPlugin() ],
     publicDir: './static',
     build: {
       outDir: '.out/main',
@@ -22,7 +21,6 @@ export default defineConfig({
     }
   },
   preload: {
-    plugins: [ externalizeDepsPlugin() ],
     publicDir: './static',
     build: {
       outDir: '.out/preload',
@@ -56,4 +54,4 @@ export default defineConfig({
       react()
     ]
   }
-})
+});
