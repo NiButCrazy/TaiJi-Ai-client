@@ -1,6 +1,12 @@
 ## :memo: 更新日志
 
-## [v0.8.1](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.8.0...v0.8.1) -  v0.8.0..
+## [v0.8.2](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.8.1...v0.8.2) -  v0.8.1..
+
+#### :hammer: CI / CD
+
+- ci: 修复打包问题 &nbsp;- by [@NiButCrazy](https://github.com/NiButCrazy) [`(68308c5)`](https://github.com/NiButCrazy/TaiJi-Ai-client/commit/68308c56c20bcd9c63c7d0c378558b523fef7b35)
+
+## [v0.8.1](https://github.com/NiButCrazy/TaiJi-Ai-client/compare/v0.8.0...v0.8.1) -  2026/06/16 
 
 #### :hammer: CI / CD
 
