@@ -1,7 +1,6 @@
 import s_ from '../styles/Home.module.less';
 import React, { useEffect, useRef } from 'react';
 import webviewJS from './webview.js?raw';
-import webviewJSNotice from './notice.js?raw';
 import webviewCSS from '../styles/webview.css?raw';
 import { useOutletContext, useNavigate } from 'react-router';
 
