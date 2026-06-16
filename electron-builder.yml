@@ -47,5 +47,6 @@ appImage: # 配置 AppImage 的打包选项
 npmRebuild: false  # 是否对 Electron 构建的 Node.js 模块进行重新编译
 publish:
   provider: github
+  releaseType: release
 electronDownload:
   mirror: https://npmmirror.com/mirrors/electron/  # 设置镜像下载地址

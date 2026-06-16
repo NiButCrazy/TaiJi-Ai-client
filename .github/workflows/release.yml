@@ -31,11 +31,7 @@ jobs:
         run: |
           nbc-auto-changelog --stdout --ending-version "${{ github.ref_name }}" --starting-version "${{ github.ref_name }}" | Out-File -FilePath changelog_new.md -Encoding utf8
 
-      - name: 构建并上传应用
-        run: npm run build:win
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          
+
       - name: 创建发布流
         id: create_release
         uses: softprops/action-gh-release@v2
@@ -45,6 +41,13 @@ jobs:
           tag_name: ${{ github.ref_name }}
           name: 太极AI ${{ github.ref_name }}
           body_path: changelog_new.md
+          
+      - name: 构建并上传应用
+        run: npm run build:win
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+
 
 
 
