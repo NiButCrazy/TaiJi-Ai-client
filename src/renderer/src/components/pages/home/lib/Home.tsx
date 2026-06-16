@@ -1,35 +1,37 @@
-import s_ from '../styles/Home.module.less'
-import React, { useEffect, useRef } from 'react'
-import webviewJS from './webview.js?raw'
-import webviewJSNotice from './notice.js?raw'
-import webviewCSS from '../styles/webview.css?raw'
-import { useOutletContext, useNavigate } from 'react-router'
+import s_ from '../styles/Home.module.less';
+import React, { useEffect, useRef } from 'react';
+import webviewJS from './webview.js?raw';
+import webviewJSNotice from './notice.js?raw';
+import webviewCSS from '../styles/webview.css?raw';
+import { useOutletContext, useNavigate } from 'react-router';
 
 
 export interface ElectronWebview extends HTMLWebViewElement {
-  insertCSS(css: string): void
-  executeJavaScript(js: string): void
-  reload(): void
-  openDevTools(): void
-  findInPage(text: string, options?: { forward?: boolean, matchCase?: boolean }): number
-  stopFindInPage(action: string): void
+  insertCSS(css: string): void;
+  executeJavaScript(js: string): void;
+  reload(): void;
+  openDevTools(): void;
+  findInPage(text: string, options?: { forward?: boolean, matchCase?: boolean }): number;
+  stopFindInPage(action: string): void;
 }
 
 
-const localConfig = (await window.AppEnv()).local_config
-let scrollToBottom = localConfig.scrollToBottom
-let closeNotice = localConfig.closeNotice
+let reloadTimes = 0;
+
+const localConfig = (await window.AppEnv()).local_config;
+let scrollToBottom = localConfig.scrollToBottom;
+let closeNotice = localConfig.closeNotice;
 
 export default function Home() {
-  const ref = useRef<ElectronWebview>(null)
-  const navigate = useNavigate()
+  const ref = useRef<ElectronWebview>(null);
+  const navigate = useNavigate();
   // const [ is_failed, setIsFailed ] = useState(false)
   const routerContext = useOutletContext<{
     webviewRef: React.RefObject<ElectronWebview | null>
     countRef: React.RefObject<HTMLSpanElement | null>
     setHeaderColor: (bool: boolean) => void
-  }>()
-  const countRef = routerContext.countRef
+  }>();
+  const countRef = routerContext.countRef;
 
   useEffect(() => {
 
@@ -38,8 +40,8 @@ export default function Home() {
     //   webview.reload()
     // })
     window.electron.ipcRenderer.on('open-devtools', (_) => {
-      webview.openDevTools()
-    })
+      webview.openDevTools();
+    });
 
     window.electron.ipcRenderer.on('close-notice', (_, bool: boolean) => {
       // closeNotice = bool
@@ -54,28 +56,28 @@ export default function Home() {
       //     `)
       // }
 
-    })
+    });
 
     // @ts-ignore
-    const webview = ref.current!
-    routerContext.webviewRef.current = webview
+    const webview = ref.current!;
+    routerContext.webviewRef.current = webview;
 
     function foudInPage(e: any) {
-      const { activeMatchOrdinal, matches }: { activeMatchOrdinal: number, matches: number } = e.result
-      countRef.current!.innerText = activeMatchOrdinal + '/' + matches
+      const { activeMatchOrdinal, matches }: { activeMatchOrdinal: number, matches: number } = e.result;
+      countRef.current!.innerText = activeMatchOrdinal + '/' + matches;
     }
 
     function contextMenu(e: any) {
-      window.electron.ipcRenderer.send('webview-context-menu', e)
-      e.preventDefault()
+      window.electron.ipcRenderer.send('webview-context-menu', e);
+      e.preventDefault();
     }
 
     function domReady() {
 
-      webview.insertCSS(webviewCSS)
+      webview.insertCSS(webviewCSS);
 
       // if (scrollToBottom) {
-      webview.executeJavaScript(webviewJS)
+      webview.executeJavaScript(webviewJS);
       // }
       // if (closeNotice) {
       //   webview.executeJavaScript(webviewJSNotice)
@@ -85,7 +87,7 @@ export default function Home() {
     function navigateInPage(e) {
       // console.log(e)
       // if (scrollToBottom) {
-      webview.executeJavaScript(webviewJS)
+      webview.executeJavaScript(webviewJS);
       // webview.executeJavaScript('_scroll_to_bottom()')
       // }
     }
@@ -94,8 +96,8 @@ export default function Home() {
       if (e.level === 1) {
         // console.log(e.message)
         if (e.message === '[太极Ai] 找到全局头部') {
-          webview.removeEventListener('console-message', consoleMessage)
-          routerContext.setHeaderColor(true)
+          webview.removeEventListener('console-message', consoleMessage);
+          routerContext.setHeaderColor(true);
         }
       }
     }
@@ -104,39 +106,45 @@ export default function Home() {
       switch (e.errorDescription) {
         case 'ERR_CONNECTION_REFUSED':
         case 'ERR_CONNECTION_CLOSED':
-          console.warn(e)
-          webview.reload()
-          break
+          // webview.reload()
+          if (reloadTimes < 3) {
+            webview.reload();
+            reloadTimes += 1;
+          } else {
+            console.warn(e);
+            navigate('/404');
+          }
+          break;
         default :
-          console.error('网页加载失败')
-          console.error(e)
-          navigate('/404')
+          console.error('网页加载失败');
+          console.error(e);
+          navigate('/404');
       }
     }
 
-    webview.addEventListener('dom-ready', domReady)
-    webview.addEventListener('context-menu', contextMenu)
-    webview.addEventListener('found-in-page', foudInPage)
-    webview.addEventListener('console-message', consoleMessage)
-    webview.addEventListener('did-navigate-in-page', navigateInPage)
-    webview.addEventListener('did-fail-load', fail_load)
+    webview.addEventListener('dom-ready', domReady);
+    webview.addEventListener('context-menu', contextMenu);
+    webview.addEventListener('found-in-page', foudInPage);
+    webview.addEventListener('console-message', consoleMessage);
+    webview.addEventListener('did-navigate-in-page', navigateInPage);
+    webview.addEventListener('did-fail-load', fail_load);
 
     return () => {
-      webview.removeEventListener('dom-ready', domReady)
-      webview.removeEventListener('context-menu', contextMenu)
-      webview.removeEventListener('found-in-page', foudInPage)
-      webview.removeEventListener('console-message', consoleMessage)
-      webview.removeEventListener('did-navigate-in-page', navigateInPage)
-      webview.removeEventListener('did-fail-load', fail_load)
-      window.electron.ipcRenderer.removeAllListeners('close-notice')
-      window.electron.ipcRenderer.removeAllListeners('open-devtools')
+      webview.removeEventListener('dom-ready', domReady);
+      webview.removeEventListener('context-menu', contextMenu);
+      webview.removeEventListener('found-in-page', foudInPage);
+      webview.removeEventListener('console-message', consoleMessage);
+      webview.removeEventListener('did-navigate-in-page', navigateInPage);
+      webview.removeEventListener('did-fail-load', fail_load);
+      window.electron.ipcRenderer.removeAllListeners('close-notice');
+      window.electron.ipcRenderer.removeAllListeners('open-devtools');
       // window.electron.ipcRenderer.removeAllListeners('scroll-to-bottom')
-    }
-  })
+    };
+  });
 
   return (
     // @ts-ignore*
     <webview allowpopups="true"
              ref={ ref } src="https://www.taijiai666.com" className={ s_.iframe } />
-  )
+  );
 }
